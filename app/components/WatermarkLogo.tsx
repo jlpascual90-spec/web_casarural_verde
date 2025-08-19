@@ -11,7 +11,7 @@ export function WatermarkLogo() {
           alt=""
           className="w-full h-full object-contain filter grayscale"
           style={{
-            filter: 'grayscale(100%) contrast(20%)'
+            filter: 'grayscale(10%) contrast(0%)'
           }}
         />
       </div>
