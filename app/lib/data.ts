@@ -71,7 +71,7 @@ export const propertyData = {
     },
     lavatrina: {
       name: "LAVATRINA",
-      description: "La vivienda dispone de tres baños completos equipados con lavabo, inodoro y plato de ducha de suelo continuo y mampara. LAVATRINA II tiene una puerta de acceso con ancho especial de 80 cm y está equipada con lavabo, inodoro, grifería, espejo para personas con movilidad reducida, también disponemos de barra de seguridad para inodoro plegable con asas antideslizantes y de banco de ducha asiento extraíble y respaldo reversible para facilitar su uso."
+      description: "La vivienda dispone de tres baños completos equipados con lavabo, inodoro y plato de ducha de suelo continuo y mampara. LAVATRINA II tiene una puerta de acceso con ancho especial de 80 cm y  está equipada con lavabo, inodoro, grifería y espejo para personas con movilidad reducida, también disponemos de silla para ducha e inodoro para facilitar su uso."
     },
     piscina: {
       name: "PISCINA",
