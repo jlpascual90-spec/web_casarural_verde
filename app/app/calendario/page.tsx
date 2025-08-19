@@ -40,13 +40,13 @@ export default function CalendarioPage() {
             ></iframe>
           </div>
 
-          {/* Additional Information */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-card rounded-lg shadow-elegant p-6">
+          {/* Servicios Incluidos - centrado */}
+          <div className="flex justify-center mt-16">
+            <div className="bg-card rounded-lg shadow-elegant p-6 w-full max-w-lg text-center">
               <h3 className="text-xl font-semibold text-card-foreground mb-4">
                 Servicios Incluidos
               </h3>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul className="space-y-2 text-muted-foreground text-left inline-block text-base">
                 <li>• Limpieza final incluida</li>
                 <li>• Ropa de cama y toallas</li>
                 <li>• WiFi de alta velocidad</li>
