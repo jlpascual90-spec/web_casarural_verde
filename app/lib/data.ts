@@ -24,7 +24,7 @@ export const propertyData = {
   },
   location: {
     address: "Olías del Rey, Toledo, España",
-    coordinates: { lat: 39.9507866, lng: -3.9949055 }
+    coordinates: { lat: 39.94856341279014, lng: -3.9940571054101515 }
   },
   rooms: [
     {
