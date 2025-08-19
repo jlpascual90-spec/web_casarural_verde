@@ -3,7 +3,7 @@
 export const propertyData = {
   name: "DUX TOLEDO",
   tagline: "Casa Rural de Lujo en el Corazón de las Tres Culturas",
-  description: "Casa rural de lujo ubicada en Olías del Rey, a solo 12 minutos del centro histórico de Toledo. Con piscina privada vallada, 6 habitaciones con nombres de emperadores romanos y todas las comodidades para una estancia inolvidable.",
+  description: "Casa rural de lujo ubicada en Olías del Rey, a solo 12 minutos del centro histórico de Toledo. Con piscina privada vallada, 6 habitaciones con nombres de generales romanos y todas las comodidades para una estancia inolvidable.",
   features: [
     "6 habitaciones con nombres romanos",
     "Piscina de 8x4 metros vallada",
