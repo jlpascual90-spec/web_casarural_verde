@@ -17,7 +17,7 @@ import {
 import { propertyData } from "@/lib/data";
 
 const featureIcons = {
-  "6 habitaciones con nombres romanos": Crown,
+  "6 habitaciones con nombres de generales romanos": Crown,
   "Piscina de 8x4 metros vallada": Waves,
   "Cocina completamente equipada en CASTRUM": Utensils,
   "3 baños completos (LAVATRINA)": Shield,
