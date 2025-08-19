@@ -15,7 +15,7 @@ export function RoomsSection() {
             DORMITORIOS
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Seis habitaciones inspiradas en los grandes emperadores romanos, equipadas con todas las comodidades modernas
+            Seis habitaciones inspiradas en los grandes generales romanos, equipadas con todas las comodidades modernas
           </p>
         </div>
 
