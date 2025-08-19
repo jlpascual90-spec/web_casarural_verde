@@ -146,11 +146,11 @@ export default function TarifasPage() {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Check-in:</span>
-                  <span className="font-medium"> Lunes a sábado a partir de las 15:00 H y domingos a partir de las 19:30 H </span>
+                  <span className="font-medium"> L a S a partir de las 15:00 H / D a partir de las 19:30 H </span>
                 </div>
                 <div className="flex justify-between">
                   <span>Check-out:</span>
-                  <span className="font-medium">Lunes a sábado hasta las 11:00 y domingos hasta las 16:00 H </span>
+                  <span className="font-medium"> L a S hasta las 11:00 / D hasta las 16:00 H </span>
                 </div>
                 <div className="flex justify-between">
                   <span>Estancia mínima:</span>
