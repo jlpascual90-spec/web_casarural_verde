@@ -88,7 +88,7 @@ export const galleryImages = [
   // PISCINA - 4 fotos
   {
     id: 1,
-    url: "https://cdn.abacus.ai/images/94d54c3c-93a8-4317-83f9-1e087f3315af.png",
+    url: "/69-DUX.jpg",
     alt: "Piscina de 8x4 metros vallada para seguridad de niños",
     category: "piscina"
   },
