@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -43,6 +42,20 @@ export default function GaleriaPage() {
   return (
     <div className="min-h-screen bg-background relative">
       <WatermarkLogo />
+      {/* Imagen de portada */}
+      <div className="w-full flex justify-center">
+        <Image
+          src="/images/piscina/69 DUX EXTERIORES.jpg"
+          alt="Piscina DUX Toledo"
+          width={1200}
+          height={800}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+          priority={true}
+          className="rounded-lg object-cover max-h-[400px] w-full"
+          style={{ objectPosition: "center" }}
+        />
+
+      </div>
       {/* Header */}
       <section className="bg-accent/30 dark:bg-accent/10 py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
