@@ -88,7 +88,7 @@ export const galleryImages = [
   // PISCINA - 4 fotos
   {
     id: 1,
-    url: "https://imgur.com/TkKMA6d",
+    url: "https://i.imgur.com/TkKMA6d.jpeg",
     alt: "Piscina de 8x4 metros vallada para seguridad de niños",
     category: "piscina"
   },
