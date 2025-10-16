@@ -144,21 +144,21 @@ export const galleryImages = [
   },
   {
     id: 10,
-    url: "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MjQ4MzY5OTc=/original/3682612c-460b-4f6d-ba42-480e3f9a6899.jpeg?im_w=720",
-    alt: "Habitación doble con ventilador de techo - estilo emperador romano",
-    category: "dormitorios"
+    url: "https://i.imgur.com/Pl3hHDP.jpeg",
+    alt: "CASTRUM - Espacio cálido para descansar y convivir",
+    category: "interior"
   },
   {
     id: 11,
-    url: "https://tonobagno.com/wp-content/uploads/2015/05/Bano-moderno-casa-Pals-Samaria-55-Emporda-Girona-Cases-Singulars-Tono-Bagno-Barcelona1.jpg",
-    alt: "LAVATRINA - Baño completo moderno con ducha y accesibilidad",
-    category: "lavatrina"
+    url: "https://i.imgur.com/npp2JXc.jpeg",
+    alt: "Pared de piedra decorada con relieve heráldico del escudo de Toledo, ambiente luminoso y con encanto",
+    category: "interior"
   },
   {
     id: 12,
-    url: "https://cdn.abacus.ai/images/603df7ef-3f39-4d61-9c96-7887d0548100.png",
-    alt: "Biblioteca y zona de juegos con decoración romana",
-    category: "castrum"
+    url: "https://i.imgur.com/MX09Nu8.jpeg",
+    alt: "Ambiente acogedor y de altos detalles para reuniones relajadas",
+    category: "interior"
   },
   // LOCALIZACIÓN - 3 fotos
   {
