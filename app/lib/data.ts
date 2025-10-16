@@ -138,33 +138,33 @@ export const galleryImages = [
   // CASTRUM - Interior principal - 4 fotos
   {
     id: 9,
-    url: "https://media.vrbo.com/lodging/35000000/34030000/34022800/34022739/e2d1e8e8.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
+    url: "https://i.imgur.com/4sYZ1vi.jpeg",
     alt: "CASTRUM - Salón-cocina de 65m2 con mesa de comedor grande",
-    category: "castrum"
+    category: "interior"
   },
   {
     id: 10,
-    url: "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MjQ4MzY5OTc=/original/3682612c-460b-4f6d-ba42-480e3f9a6899.jpeg?im_w=720",
-    alt: "Habitación doble con ventilador de techo - estilo emperador romano",
-    category: "dormitorios"
+    url: "https://i.imgur.com/Pl3hHDP.jpeg",
+    alt: "CASTRUM - Espacio cálido para descansar y convivir",
+    category: "interior"
   },
   {
     id: 11,
-    url: "https://tonobagno.com/wp-content/uploads/2015/05/Bano-moderno-casa-Pals-Samaria-55-Emporda-Girona-Cases-Singulars-Tono-Bagno-Barcelona1.jpg",
-    alt: "LAVATRINA - Baño completo moderno con ducha y accesibilidad",
-    category: "lavatrina"
+    url: "https://i.imgur.com/npp2JXc.jpeg",
+    alt: "Pared de piedra decorada con relieve heráldico del escudo de Toledo, ambiente luminoso y con encanto",
+    category: "interior"
   },
   {
     id: 12,
-    url: "https://cdn.abacus.ai/images/603df7ef-3f39-4d61-9c96-7887d0548100.png",
-    alt: "Biblioteca y zona de juegos con decoración romana",
-    category: "castrum"
+    url: "https://i.imgur.com/MX09Nu8.jpeg",
+    alt: "Ambiente acogedor y de altos detalles para reuniones relajadas",
+    category: "interior"
   },
   // LOCALIZACIÓN - 3 fotos
   {
     id: 13,
     url: "https://images.squarespace-cdn.com/content/v1/5c7976ec11f78465c3ab8a2d/79c67f22-c5bf-4c1e-9c02-944536316f56/Madrid%2C+Spain-0267-April+23%2C+2018+Smart+Photo.jpg",
-    alt: "Panorámica de Toledo al atardecer desde DUX TOLEDO",
+    alt: "Panorámica de Toledo al atardecer cerca de DUX TOLEDO",
     category: "location"
   },
   {
@@ -173,12 +173,6 @@ export const galleryImages = [
     alt: "Vista histórica de Toledo - Ciudad de las Tres Culturas",
     category: "location"
   },
-  {
-    id: 15,
-    url: "https://thumbs.dreamstime.com/b/castilian-landscapes-toledo-spain-wheat-field-spring-landscape-castilla-la-mancha-spain-castilian-landscapes-262993113.jpg",
-    alt: "Paisaje castellano de Toledo - Entorno de DUX TOLEDO",
-    category: "location"
-  }
 ];
 
 // Datos simulados del calendario con disponibilidad y precios
