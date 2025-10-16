@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-@@ -43,6 +42,20 @@ export default function GaleriaPage() {
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight, Camera, Filter } from "lucide-react";
 import { galleryImages } from "@/lib/data";
