@@ -138,9 +138,9 @@ export const galleryImages = [
   // CASTRUM - Interior principal - 4 fotos
   {
     id: 9,
-    url: "https://media.vrbo.com/lodging/35000000/34030000/34022800/34022739/e2d1e8e8.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
+    url: "https://i.imgur.com/4sYZ1vi.jpeg",
     alt: "CASTRUM - Salón-cocina de 65m2 con mesa de comedor grande",
-    category: "castrum"
+    category: "interior"
   },
   {
     id: 10,
