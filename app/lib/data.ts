@@ -164,7 +164,7 @@ export const galleryImages = [
   {
     id: 13,
     url: "https://images.squarespace-cdn.com/content/v1/5c7976ec11f78465c3ab8a2d/79c67f22-c5bf-4c1e-9c02-944536316f56/Madrid%2C+Spain-0267-April+23%2C+2018+Smart+Photo.jpg",
-    alt: "Panorámica de Toledo al atardecer desde DUX TOLEDO",
+    alt: "Panorámica de Toledo al atardecer cerca de DUX TOLEDO",
     category: "location"
   },
   {
@@ -173,12 +173,6 @@ export const galleryImages = [
     alt: "Vista histórica de Toledo - Ciudad de las Tres Culturas",
     category: "location"
   },
-  {
-    id: 15,
-    url: "https://thumbs.dreamstime.com/b/castilian-landscapes-toledo-spain-wheat-field-spring-landscape-castilla-la-mancha-spain-castilian-landscapes-262993113.jpg",
-    alt: "Paisaje castellano de Toledo - Entorno de DUX TOLEDO",
-    category: "location"
-  }
 ];
 
 // Datos simulados del calendario con disponibilidad y precios
