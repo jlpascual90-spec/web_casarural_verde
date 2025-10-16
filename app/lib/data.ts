@@ -89,44 +89,44 @@ export const galleryImages = [
   {
     id: 1,
     url: "https://i.imgur.com/TkKMA6d.jpeg",
-    alt: "Piscina de 8x4 metros vallada para seguridad de niños",
+    alt: "Piscina de 8x4 metros con mosaico azul y agua cristalina, un espacio luminoso y refrescante.",
     category: "piscina"
   },
   {
     id: 2,
-    url: "https://www.turismodecalidad.com/images/w.1280/h.853/c.1/mr.0/d.listing_photos/sd.2023-06/i.2f421feadd6cb5da5b8559cdb4021019.jpg",
+    url: "https://i.imgur.com/Etu0P0h.jpeg",
     alt: "Zona de piscina con tumbonas y área para tomar el sol",
     category: "piscina"
   },
   {
     id: 3,
-    url: "https://media.revistaad.es/photos/62a31b9b6488892d74346915/master/w_2560%2Cc_limit/ITURREGI.jpg",
-    alt: "Piscina con vista de casa rural de lujo",
-    category: "piscina"
+    url: "https://i.imgur.com/qevEXnG.jpeg",
+    alt: "Amplia terraza con mesa de ping‑pong, larga mesa de comedor al aire libre y fachada de piedra; un espacio soleado ideal para reuniones y ocio.",
+    category: "exterior"
   },
   {
     id: 4,
-    url: "https://thumbs.dreamstime.com/b/villa-de-lujo-estilo-espa%C3%B1ol-reflejando-en-piscina-al-atardecer-escena-tranquila-una-lujosa-que-se-refleja-muy-bien-iluminada-con-371100165.jpg",
-    alt: "Piscina iluminada al atardecer con ambiente mágico",
-    category: "piscina"
+    url: "https://i.imgur.com/9wORP03.jpeg",
+    alt: "Espacio de barbacoa totalmente equipado con fregadero, encimera y armarios, ideal para cocinar al aire libre.",
+    category: "exterior"
   },
   // EXTERIOR - 4 fotos
   {
     id: 5,
-    url: "https://www.loscascajales.com/web/wp-content/uploads/2023/06/Terraza-con-mesas.jpg",
-    alt: "Zona de barbacoa y cocina exterior completamente equipada",
+    url: "https://i.imgur.com/Tzw2J58.jpeg",
+    alt: "Zona de barbacoa y cocina exterior",
     category: "exterior"
   },
   {
     id: 6,
-    url: "https://cdn.abacus.ai/images/42252440-ff9d-4b9c-8cc7-f1dbee5e737e.png",
+    url: "https://i.imgur.com/YvWFnD1.jpeg",
     alt: "Ajedrez gigante de exterior y mesa de ping pong en el jardín",
     category: "exterior"
   },
   {
     id: 7,
-    url: "https://media.vrbo.com/lodging/35000000/34430000/34420300/34420260/69240486.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
-    alt: "Fachada de casa rural de lujo moderna DUX TOLEDO",
+    url: "https://i.imgur.com/GmIjeBe.jpeg",
+    alt: "Detalle decorativo con bidón lechero y aceitero antiguos, toque auténtico y rural en los exteriores.",
     category: "exterior"
   },
   {
