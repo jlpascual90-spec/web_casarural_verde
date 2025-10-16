@@ -85,7 +85,7 @@ export const propertyData = {
 };
 
 export const galleryImages = [
-  // PISCINA - 4 fotos
+  // PISCINA - 2 fotos
   {
     id: 1,
     url: "https://i.imgur.com/TkKMA6d.jpeg",
@@ -98,6 +98,7 @@ export const galleryImages = [
     alt: "Zona de piscina con tumbonas y área para tomar el sol",
     category: "piscina"
   },
+ // EXTERIOR - 5 fotos
   {
     id: 3,
     url: "https://i.imgur.com/qevEXnG.jpeg",
@@ -110,7 +111,6 @@ export const galleryImages = [
     alt: "Espacio de barbacoa totalmente equipado con fregadero, encimera y armarios, ideal para cocinar al aire libre.",
     category: "exterior"
   },
-  // EXTERIOR - 4 fotos
   {
     id: 5,
     url: "https://i.imgur.com/Tzw2J58.jpeg",
@@ -131,8 +131,8 @@ export const galleryImages = [
   },
   {
     id: 8,
-    url: "https://hips.hearstapps.com/hmg-prod/images/casa-con-piscina-estudio-terraza-balear-660d3e34a6051.jpg?resize=980:*",
-    alt: "Terraza y área de comedor exterior con vistas",
+    url: "https://i.imgur.com/0gcdG7t.jpeg",
+    alt: "Patio con un rincón cuidado y tranquilo para disfrutar al aire libre.",
     category: "exterior"
   },
   // CASTRUM - Interior principal - 4 fotos
