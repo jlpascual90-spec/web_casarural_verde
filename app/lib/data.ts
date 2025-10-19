@@ -1,4 +1,3 @@
-
 // Datos de DUX TOLEDO - Casa Rural de Lujo
 export const propertyData = {
   name: "DUX TOLEDO",
@@ -88,7 +87,7 @@ export const galleryImages = [
   // PISCINA - 2 fotos
   {
     id: 1,
-    url: "https://i.imgur.com/TkKMA6d.jpeg",
+    url: "/01_exteriores/69.avif",
     alt: "Piscina de 8x4 metros con mosaico azul y agua cristalina, un espacio luminoso y refrescante.",
     category: "piscina"
   },
