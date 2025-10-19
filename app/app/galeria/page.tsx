@@ -6,11 +6,19 @@ import { X, ChevronLeft, ChevronRight, Camera, Filter } from "lucide-react";
 import { galleryImages } from "@/lib/data";
 import { WatermarkLogo } from "@/components/WatermarkLogo";
 
-const categories = [
-  { id: 'all', label: 'Todas las fotos', count: galleryImages?.length || 0 },
-  { id: 'exterior', label: 'Exteriores', count: galleryImages?.filter(img => img?.category === 'exterior')?.length || 0 },
-  { id: 'interior', label: 'Interiores', count: galleryImages?.filter(img => img?.category === 'interior')?.length || 0 },
-  { id: 'location', label: 'Toledo y alrededores', count: galleryImages?.filter(img => img?.category === 'location')?.length || 0 }
+const categories = [  
+  { id: 'all', label: 'Todas las fotos', count: galleryImages?.length || 0 },  
+  { id: 'exterior', label: 'Exteriores', count: galleryImages?.filter(img => img?.category === 'exterior')?.length || 0 },  
+  {   
+    id: 'interior',   
+    label: 'Interiores',   
+    count: galleryImages?.filter(img =>   
+      img?.category === 'interior' ||   
+      img?.category === 'CASTRUM' ||   
+      img?.category === 'LAVATRINA'  
+    )?.length || 0   
+  },  
+  { id: 'location', label: 'Toledo y alrededores', count: galleryImages?.filter(img => img?.category === 'location')?.length || 0 }  
 ];
 
 export default function GaleriaPage() {
