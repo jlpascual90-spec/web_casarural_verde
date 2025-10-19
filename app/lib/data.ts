@@ -152,62 +152,62 @@ export const galleryImages = [
     id: 11,
     url: "https://i.imgur.com/npp2JXc.jpeg",
     alt: "Pared de piedra decorada con relieve heráldico del escudo de Toledo, ambiente luminoso y con encanto",
-    category: "interior"
+    category: "CASTRUM"
   },
   {
     id: 12,
     url: "https://i.imgur.com/MX09Nu8.jpeg",
     alt: "Ambiente acogedor y de altos detalles para reuniones relajadas",
-    category: "interior"
+    category: "CASTRUM"
   },
   // Interior habitaciones - 8 fotos
   {
     id: 13,
     url: "https://i.imgur.com/L9tFcQS.jpeg",
     alt: "JULIUS CAESAR - Habitación luminosa con doble cama individual, espacio tranquilo y prácito para descanso reparador.",
-    category: "habitaciones"
+    category: "JULIUS CAESAR"
   },
   {
     id: 14,
     url: "https://i.imgur.com/kAs5F4Z.jpeg",
     alt: "POMPEIUS MAGNUS - Detalle cartel entrada a habitación.",
-    category: "habitaciones"
+    category: "POMPEIUS MAGNUS"
   },
   {
     id: 15,
     url: "https://i.imgur.com/qYJgxN4.jpeg",
     alt: "POMPEIUS MAGNUS - Habitación doble con pequeño escritorio.",
-    category: "habitaciones"
+    category: "POMPEIUS MAGNUS"
   },
   {
     id: 16,
     url: "https://i.imgur.com/lHtyrLc.jpeg",
     alt: "SCIPIO AFRICANUS - Habitación doble con baño contiguo.",
-    category: "habitaciones"
+    category: "SCIPIO AFRICANUS"
   },
   {
     id: 17,
     url: "https://i.imgur.com/zZ9h6s2.jpeg",
     alt: "AGRIPA - Habitación doble con pared texturizada.",
-    category: "habitaciones"
+    category: "AGRIPPA"
   },
   {
     id: 18,
     url: "https://i.imgur.com/uP54GrO.jpeg",
     alt: "AGRIPA - Detalle escritorio.",
-    category: "habitaciones"
+    category: "AGRIPPA"
   },
   {
     id: 19,
     url: "https://i.imgur.com/Nh2udIU.jpeg",
     alt: "SULLA - Habitación doble, refugio freco y acogedor.",
-    category: "habitaciones"
+    category: "SULLA"
   },
   {
     id: 20,
     url: "https://i.imgur.com/amrpnk1.jpeg",
     alt: "GERMANICUS - Habitación triple inspidada en la serenidad de los campamentos romanos.",
-    category: "habitaciones"
+    category: "GERMANICUS"
   },
   // Interior baños - 3 fotos
   {
@@ -220,7 +220,7 @@ export const galleryImages = [
     id: 22,
     url: "https://i.imgur.com/0YEUJC1.jpeg",
     alt: "LAVATRINA II - Aseo ámplio y adaptado.",
-    category: "Aseos"
+    category: "LAVATRINA"
   },
   {
     id: 23,
