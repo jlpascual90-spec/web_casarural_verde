@@ -140,37 +140,100 @@ export const galleryImages = [
     id: 9,
     url: "https://i.imgur.com/4sYZ1vi.jpeg",
     alt: "CASTRUM - Salón-cocina de 65m2 con mesa de comedor grande",
-    category: "interior"
+    category: "CASTUM"
   },
   {
     id: 10,
     url: "https://i.imgur.com/Pl3hHDP.jpeg",
     alt: "CASTRUM - Espacio cálido para descansar y convivir",
-    category: "interior"
+    category: "CASTRUM"
   },
   {
     id: 11,
     url: "https://i.imgur.com/npp2JXc.jpeg",
     alt: "Pared de piedra decorada con relieve heráldico del escudo de Toledo, ambiente luminoso y con encanto",
-    category: "interior"
+    category: "CASTRUM"
   },
   {
     id: 12,
     url: "https://i.imgur.com/MX09Nu8.jpeg",
     alt: "Ambiente acogedor y de altos detalles para reuniones relajadas",
-    category: "interior"
+    category: "CASTRUM"
   },
-  // LOCALIZACIÓN - 3 fotos
+  // Interior habitaciones - 8 fotos
   {
     id: 13,
-    url: "https://images.squarespace-cdn.com/content/v1/5c7976ec11f78465c3ab8a2d/79c67f22-c5bf-4c1e-9c02-944536316f56/Madrid%2C+Spain-0267-April+23%2C+2018+Smart+Photo.jpg",
-    alt: "Panorámica de Toledo al atardecer cerca de DUX TOLEDO",
-    category: "location"
+    url: "https://i.imgur.com/L9tFcQS.jpeg",
+    alt: "JULIUS CAESAR - Habitación luminosa con doble cama individual, espacio tranquilo y prácito para descanso reparador.",
+    category: "JULIUS CAESAR"
   },
   {
     id: 14,
-    url: "https://c8.alamy.com/comp/W4FBXX/beautiful-view-of-toledo-city-skyline-with-cathedral-alcazar-and-tagus-river-at-sunset-toledo-castila-la-macha-spain-W4FBXX.jpg",
-    alt: "Vista histórica de Toledo - Ciudad de las Tres Culturas",
+    url: "https://i.imgur.com/kAs5F4Z.jpeg",
+    alt: "POMPEIUS MAGNUS - Detalle cartel entrada a habitación.",
+    category: "POMPEIUS MAGNUS"
+  },
+  {
+    id: 15,
+    url: "https://i.imgur.com/qYJgxN4.jpeg",
+    alt: "POMPEIUS MAGNUS - Habitación doble con pequeño escritorio.",
+    category: "POMPEIUS MAGNUS"
+  },
+  {
+    id: 16,
+    url: "https://i.imgur.com/lHtyrLc.jpeg",
+    alt: "SCIPIO AFRICANUS - Habitación doble con baño contiguo.",
+    category: "SCIPIO AFRICANUS"
+  },
+  {
+    id: 17,
+    url: "https://i.imgur.com/zZ9h6s2.jpeg",
+    alt: "AGRIPA - Habitación doble con pared texturizada.",
+    category: "AGRIPPA"
+  },
+  {
+    id: 18,
+    url: "https://i.imgur.com/uP54GrO.jpeg",
+    alt: "AGRIPA - Detalle escritorio.",
+    category: "AGRIPPA"
+  },
+  {
+    id: 19,
+    url: "https://i.imgur.com/Nh2udIU.jpeg",
+    alt: "SULLA - Habitación doble, refugio freco y acogedor.",
+    category: "SULLA"
+  },
+  {
+    id: 20,
+    url: "https://i.imgur.com/amrpnk1.jpeg",
+    alt: "GERMANICUS - Habitación triple inspidada en la serenidad de los campamentos romanos.",
+    category: "GERMANICUS"
+  },
+  // Interior baños - 3 fotos
+  {
+    id: 21,
+    url: "https://i.imgur.com/mDWBnYi.jpeg",
+    alt: "LAVATRINA I - El aseo rinde guiño a las termas romanas.",
+    category: "LAVATRINA"
+  },
+  {
+    id: 22,
+    url: "https://i.imgur.com/0YEUJC1.jpeg",
+    alt: "LAVATRINA II - Aseo ámplio y adaptado.",
+    category: "LAVATRINA"
+  },
+  {
+    id: 23,
+    url: "https://i.imgur.com/4cnxZ0F.jpeg",
+    alt: "LAVATRINA III - Aseo práctico y luminoso que invita a cuidarse tras un día de aventuras.",
+    category: "LAVATRINA"
+  },
+  
+  // LOCALIZACIÓN - 3 fotos
+  {
+    id: 51,
+    url: "https://images.squarespace-cdn.com/content/v1/5c7976ec11f78465c3ab8a2d/79c67f22-c5bf-4c1e-9c02-944536316f56/Madrid%2C+Spain-0267-April+23%2C+2018+Smart+Photo.jpg",
+    alt: "Panorámica de Toledo - Ciudad de las Tres Culturas",
     category: "location"
   },
 ];
