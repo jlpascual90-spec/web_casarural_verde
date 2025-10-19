@@ -1,12 +1,5 @@
 // app/condiciones/page.tsx
-"use client";
-
 import Link from "next/link";
-
-export const metadata = {
-  title: "Condiciones de alquiler y normas - DUX TOLEDO",
-  description: "Condiciones de alquiler / Normas de DUX TOLEDO",
-};
 
 export default function CondicionesPage() {
   return (
@@ -82,13 +75,13 @@ export default function CondicionesPage() {
           </p>
           <p>
             Los señores clientes tendrán en todo momento a su disposición a los titulares del establecimiento para cualquier tipo de consulta o requerimiento
-            en los números de teléfono que se les facilitarán. 
+            en los números de teléfono que se les facilitarán. 
           </p>
 
           <h2>FORMA DE PAGO</h2>
           <p>
             Los Señores clientes deberán abonar el total de la estancia en el momento de la entrega de llaves y a la firma de este contrato, mediante efectivo,
-            transferencia o tarjeta. 
+            transferencia o tarjeta. 
           </p>
 
           <h2>NORMAS DE COMPORTAMIENTO Y EQUIPACIÓN</h2>
@@ -137,7 +130,7 @@ export default function CondicionesPage() {
             en cualquiera de ellos deberá comunicarlo a los titulares de la casa.
           </p>
           <p>
-            La basura debe de ser depositada en los contenedores situados en la zona. Se les mostrará a su llegada la ubicación de los mismos. 
+            La basura debe de ser depositada en los contenedores situados en la zona. Se les mostrará a su llegada la ubicación de los mismos. 
           </p>
           <p>En caso de no cumplimento de las normas de limpieza y mantenimiento podrán ser retenidos la cantidad de 50 € del importe de la fianza.</p>
 
