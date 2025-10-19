@@ -140,13 +140,13 @@ export const galleryImages = [
     id: 9,
     url: "https://i.imgur.com/4sYZ1vi.jpeg",
     alt: "CASTRUM - Salón-cocina de 65m2 con mesa de comedor grande",
-    category: "interior"
+    category: "CASTUM"
   },
   {
     id: 10,
     url: "https://i.imgur.com/Pl3hHDP.jpeg",
     alt: "CASTRUM - Espacio cálido para descansar y convivir",
-    category: "interior"
+    category: "CASTRUM"
   },
   {
     id: 11,
@@ -214,7 +214,7 @@ export const galleryImages = [
     id: 21,
     url: "https://i.imgur.com/mDWBnYi.jpeg",
     alt: "LAVATRINA I - El aseo rinde guiño a las termas romanas.",
-    category: "Aseos"
+    category: "LAVATRINA"
   },
   {
     id: 22,
@@ -226,7 +226,7 @@ export const galleryImages = [
     id: 23,
     url: "https://i.imgur.com/4cnxZ0F.jpeg",
     alt: "LAVATRINA III - Aseo práctico y luminoso que invita a cuidarse tras un día de aventuras.",
-    category: "Aseos"
+    category: "LAVATRINA"
   },
   
   // LOCALIZACIÓN - 3 fotos
