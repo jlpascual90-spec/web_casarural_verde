@@ -15,7 +15,13 @@ const categories = [
     count: galleryImages?.filter(img => 
       img?.category === 'interior' || 
       img?.category === 'CASTRUM' || 
-      img?.category === 'LAVATRINA'
+      img?.category === 'LAVATRINA' ||
+      img?.category === 'AGRIPPA' ||
+      img?.category === 'SCIPIO AFRICANUS' ||
+      img?.category === 'GERMANICUS' ||
+      img?.category === 'POMPEIUS MAGNUS' ||
+      img?.category === 'SULLA' ||
+      img?.category === 'JULIUS CAESAR'
     )?.length || 0 
   },
   { id: 'location', label: 'Toledo y alrededores', count: galleryImages?.filter(img => img?.category === 'location')?.length || 0 }
@@ -31,7 +37,13 @@ export default function GaleriaPage() {
       ? galleryImages?.filter(img => 
           img?.category === 'interior' || 
           img?.category === 'CASTRUM' || 
-          img?.category === 'LAVATRINA'
+          img?.category === 'LAVATRINA' ||
+          img?.category === 'AGRIPPA' ||
+          img?.category === 'SCIPIO AFRICANUS' ||
+          img?.category === 'GERMANICUS' ||
+          img?.category === 'POMPEIUS MAGNUS' ||
+          img?.category === 'SULLA' ||
+          img?.category === 'JULIUS CAESAR'
         ) || []
       : galleryImages?.filter(img => img?.category === selectedCategory) || [];
 
