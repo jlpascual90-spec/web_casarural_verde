@@ -169,10 +169,6 @@ export default function TarifasPage() {
                   <strong>Festivos y Puentes:</strong> Se aplican tarifas especiales 
                   para días festivos, puentes y fines de semana que incluyan días festivos.
                 </p>
-                <p>
-                  <strong>Temporada Alta:</strong> Julio, agosto y fechas especiales 
-                  pueden tener suplemento.
-                </p>
               </div>
             </div>
           </div>
