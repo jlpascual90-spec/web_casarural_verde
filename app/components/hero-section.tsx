@@ -96,7 +96,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-fade-in">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white animate-fade-in">
         <div className="animate-bounce">
           <div className="w-1 h-16 bg-white/50 rounded-full mx-auto mb-2" />
           <p className="text-sm">Desliza para explorar</p>
