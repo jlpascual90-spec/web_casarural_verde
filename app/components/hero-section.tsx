@@ -81,14 +81,12 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-in-right">
             <a
               href="/calendario"
-              className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
+              className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all duration-200 shadow-lg hover:shadow-xl"            >
               Ver Disponibilidad
             </a>
             <a
               href="/contacto"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-200"
-            >
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-200"            >
               Contactar Ahora
             </a>
           </div>
