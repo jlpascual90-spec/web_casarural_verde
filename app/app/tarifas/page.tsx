@@ -1,4 +1,4 @@
-import { ArrowLeft, Clock, Calendar, Euro, Star } from "lucide-react";
+import { ArrowLeft, Clock, Calendar, Euro, Star, FileText } from "lucide-react";
 import Link from "next/link";
 import { WatermarkLogo } from "@/components/WatermarkLogo";
 
@@ -14,7 +14,7 @@ export default function TarifasPage() {
       name: "Escapada de 2 Días",
       duration: "2 días / 1 noche",
       minStay: "Mínimo 2 noches",
-      price: "400€/noche",
+      price: "800€",
       features: [
         "Check-in: 15:00 H",
         "Check-out: 16:00 H",
@@ -174,20 +174,33 @@ export default function TarifasPage() {
           </div>
 
           {/* Política de Reservas */}
-          <div className="bg-card rounded-lg p-6 shadow-sm mt-8">
+          <div className="bg-card rounded-lg p-6 shadow-sm mt-8 border-2 border-primary/20">
             <div className="flex items-center gap-3 mb-4">
-              <Star className="h-6 w-6 text-primary" />
-              <h3 className="text-xl font-semibold">Política de Reservas</h3>
+              <FileText className="h-6 w-6 text-primary" />
+              <h3 className="text-xl font-semibold">Condiciones de Reserva</h3>
             </div>
-            <div className="space-y-3 text-sm text-muted-foreground">
+            <div className="space-y-4 text-sm text-muted-foreground">
               <p>
-                La reserva se realizará a través de la página web o llamando al teléfono <strong>687765315</strong>. Para hacerla efectiva, una vez confirmada la disponibilidad deberá realizar un ingreso de un <strong>200 €</strong> en concepto de fianza en la cuenta que se le facilitará. La formalización de la reserva implica la aceptación por ambas partes de este contrato y de todas las condiciones en él reflejadas. En caso de no hacerse efectivo el importe en un plazo de tres días desde el momento de la llamada la reserva quedará cancelada. Se entenderá que la cantidad entregada en concepto de anticipo o señal, constituye el importe del depósito en garantía, en caso de producirse algún desperfecto en la casa.
+                Para realizar una reserva, contacte con nosotros a través de nuestra web 
+                o llamando al <strong className="text-primary">687 765 315</strong>. 
+                Se requiere una fianza de <strong>200€</strong> para confirmar la disponibilidad.
               </p>
-              <p>
-                Podrán cancelar su reserva sin coste alguno si lo hace con más de quince días de antelación a la fecha de entrada. Si cancela su reserva entre los días 14 y 8 a la fecha de entrada, se le retendrá el 50% de la fianza depositada. Si la cancelación es en el 7° día o menos de la fecha de entrada, se retendrá la totalidad de la fianza.
-              </p>
-              <p>
-                Los señores clientes se atendrán a los horarios establecidos que figuran, consultando en todo caso a los propietarios de DUX TOLEDO en lo referente a la flexibilidad de los límites horarios. <br/>
+              <div className="bg-primary/5 rounded-lg p-4 border border-primary/20">
+                <p className="text-foreground font-medium mb-2">
+                  📋 Información importante sobre reservas, cancelaciones y normas de la casa:
+                </p>
+                <Link
+                  href="/condiciones-alquiler-normas"
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold"
+                >
+                  <FileText className="h-4 w-4" />
+                  Ver Condiciones de Alquiler y Normas Completas
+                  <ArrowLeft className="h-4 w-4 rotate-180" />
+                </Link>
+              </div>
+              <p className="text-xs italic">
+                La formalización de la reserva implica la aceptación de todas las condiciones 
+                y normas establecidas en el documento de condiciones de alquiler.
               </p>
             </div>
           </div>
