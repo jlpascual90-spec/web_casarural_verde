@@ -81,14 +81,12 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-in-right">
             <a
               href="/calendario"
-              className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
+              className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all duration-200 shadow-lg hover:shadow-xl"            >
               Ver Disponibilidad
             </a>
             <a
               href="/contacto"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-200"
-            >
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-200"            >
               Contactar Ahora
             </a>
           </div>
@@ -96,7 +94,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-fade-in">
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white animate-fade-in">
         <div className="animate-bounce">
           <div className="w-1 h-16 bg-white/50 rounded-full mx-auto mb-2" />
           <p className="text-sm">Desliza para explorar</p>
