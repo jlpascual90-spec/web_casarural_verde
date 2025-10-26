@@ -1,7 +1,7 @@
-
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { 
   Thermometer, 
   Shield, 
@@ -13,7 +13,8 @@ import {
   Star,
   Mountain,
   Camera,
-  Castle
+  Castle,
+  Award
 } from "lucide-react";
 
 export function ServicesSection() {
@@ -160,7 +161,7 @@ export function ServicesSection() {
         </div>
 
         {/* ALREDEDORES */}
-        <div className="mb-12">
+        <div className="mb-16">
           <h3 className="text-2xl font-bold text-foreground mb-8 text-center flex items-center justify-center">
             <Mountain className="h-6 w-6 text-primary mr-3" />
             ALREDEDORES - LUGARES DE INTERÉS
@@ -247,6 +248,54 @@ export function ServicesSection() {
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span>Palacio de Aranjuez</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* DISTINTIVO 4 ESTRELLAS */}
+        <div className="mt-16">
+          <div className="bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-950/20 dark:to-yellow-950/20 rounded-xl p-8 shadow-elegant border-2 border-amber-200 dark:border-amber-800">
+            <div className="flex flex-col lg:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <div className="relative w-48 h-48 bg-white dark:bg-card rounded-lg p-4 shadow-lg">
+                  <Image
+                    src="/distintivo_4estrellas.png"
+                    alt="Distintivo 4 Estrellas Casas Rurales - DUX TOLEDO"
+                    fill
+                    className="object-contain p-2"
+                  />
+                </div>
+              </div>
+              
+              <div className="flex-1 text-center lg:text-left">
+                <div className="flex items-center justify-center lg:justify-start mb-4">
+                  <Award className="h-8 w-8 text-amber-600 mr-3" />
+                  <h3 className="text-2xl font-bold text-foreground">
+                    Calidad Certificada
+                  </h3>
+                </div>
+                
+                <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+                  DUX TOLEDO cuenta con el <strong className="text-amber-700 dark:text-amber-500">Distintivo de 4 Estrellas</strong> otorgado por la Junta de Comunidades de Castilla-La Mancha, que certifica la excelencia de nuestras instalaciones y servicios como casa rural.
+                </p>
+                
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                    <Star className="h-4 w-4 fill-current" />
+                    Máxima Categoría
+                  </span>
+                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium">
+                    Calidad Garantizada
+                  </span>
+                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium">
+                    Certificación Oficial
+                  </span>
+                </div>
+                
+                <p className="text-sm text-muted-foreground mt-4 italic">
+                  Este distintivo avala nuestro compromiso con la calidad, el confort y la satisfacción de nuestros huéspedes.
+                </p>
               </div>
             </div>
           </div>
