@@ -87,13 +87,13 @@ export const galleryImages = [
   // PISCINA - IDs 1-10
   {
     id: 1,
-    url: "https://i.imgur.com/TkKMA6d.jpeg",
+    url: "/01_exteriores/69.avif",
     alt: "Piscina de 8x4 metros con mosaico azul y agua cristalina, un espacio luminoso y refrescante.",
     category: "piscina"
   },
   {
     id: 2,
-    url: "https://i.imgur.com/Etu0P0h.jpeg",
+    url: "/01_exteriores/71 DUX EXTERIORES.avif",
     alt: "Zona de piscina con tumbonas y área para tomar el sol",
     category: "piscina"
   },
@@ -133,6 +133,12 @@ export const galleryImages = [
     id: 16,
     url: "https://i.imgur.com/0gcdG7t.jpeg",
     alt: "Patio con un rincón cuidado y tranquilo para disfrutar al aire libre.",
+    category: "EXTERIOR"
+  },
+  {
+    id: 17,
+    url: "/01_exteriores/75 DUX EXTERIORES.avif",
+    alt: "Exterior com amplio patio y piscina",
     category: "EXTERIOR"
   },
   
