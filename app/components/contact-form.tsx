@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -129,26 +128,6 @@ Detalles de mi consulta:
               >
                 {propertyData?.contact?.whatsapp}
               </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-accent/30 rounded-lg p-6">
-          <h3 className="text-lg font-semibold text-card-foreground mb-3">
-            Horario de Atención
-          </h3>
-          <div className="space-y-2 text-muted-foreground">
-            <div className="flex justify-between">
-              <span>Lunes - Viernes:</span>
-              <span>9:00 - 20:00</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Sábados:</span>
-              <span>10:00 - 18:00</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Domingos:</span>
-              <span>10:00 - 16:00</span>
             </div>
           </div>
         </div>
