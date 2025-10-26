@@ -101,37 +101,37 @@ export const galleryImages = [
   // EXTERIOR - IDs 11-20
   {
     id: 11,
-    url: "https://i.imgur.com/qevEXnG.jpeg",
+    url: "/01_exteriores/65 DUX EXTERIORES.avif",
     alt: "Amplia terraza con mesa de ping‑pong, larga mesa de comedor al aire libre y fachada de piedra; un espacio soleado ideal para reuniones y ocio.",
     category: "EXTERIOR"
   },
   {
     id: 12,
-    url: "https://i.imgur.com/9wORP03.jpeg",
+    url: "/01_exteriores/83 DUX EXTERIORES.avif",
     alt: "Espacio de barbacoa totalmente equipado con fregadero, encimera y armarios, ideal para cocinar al aire libre.",
     category: "EXTERIOR"
   },
   {
     id: 13,
-    url: "https://i.imgur.com/Tzw2J58.jpeg",
+    url: "/01_exteriores/84 DUX EXTERIORES.avif",
     alt: "Zona de barbacoa y cocina exterior",
     category: "EXTERIOR"
   },
   {
     id: 14,
-    url: "https://i.imgur.com/YvWFnD1.jpeg",
+    url: "/01_exteriores/78 DUX EXTERIORES.avif",
     alt: "Ajedrez gigante de exterior y mesa de ping pong en el jardín",
     category: "EXTERIOR"
   },
   {
     id: 15,
-    url: "https://i.imgur.com/GmIjeBe.jpeg",
+    url: "/01_exteriores/66 DUX EXTERIORES.avif",
     alt: "Detalle decorativo con bidón lechero y aceitero antiguos, toque auténtico y rural en los exteriores.",
     category: "EXTERIOR"
   },
   {
     id: 16,
-    url: "https://i.imgur.com/0gcdG7t.jpeg",
+    url: "/01_exteriores/77 DUX EXTERIORES.avif",
     alt: "Patio con un rincón cuidado y tranquilo para disfrutar al aire libre.",
     category: "EXTERIOR"
   },
@@ -141,7 +141,12 @@ export const galleryImages = [
     alt: "Exterior com amplio patio y piscina",
     category: "EXTERIOR"
   },
-  
+  {
+    id: 18,
+    url: "/01_exteriores/63 DUX EXTERIORES.avif",
+    alt: "Fachada edificio con detalles cuidados y camino de acceso",
+    category: "EXTERIOR"
+  },  
   // CASTRUM - IDs 21-30
   {
     id: 21,
