@@ -8,7 +8,14 @@ import { WatermarkLogo } from "@/components/WatermarkLogo";
 
 const categories = [
   { id: 'all', label: 'Todas las fotos', count: galleryImages?.length || 0 },
-  { id: 'exterior', label: 'Exteriores', count: galleryImages?.filter(img => img?.category === 'exterior')?.length || 0 },
+  { 
+    id: 'exterior', 
+    label: 'Exteriores', 
+    count: galleryImages?.filter(img => 
+      img?.category === 'EXTERIOR' || 
+      img?.category === 'piscina'
+    )?.length || 0 
+  },
   { 
     id: 'interior', 
     label: 'Interiores', 
@@ -33,19 +40,24 @@ export default function GaleriaPage() {
 
   const filteredImages = selectedCategory === 'all' 
     ? galleryImages 
-    : selectedCategory === 'interior'
+    : selectedCategory === 'exterior'
       ? galleryImages?.filter(img => 
-          img?.category === 'interior' || 
-          img?.category === 'CASTRUM' || 
-          img?.category === 'LAVATRINA' ||
-          img?.category === 'AGRIPPA' ||
-          img?.category === 'SCIPIO AFRICANUS' ||
-          img?.category === 'GERMANICUS' ||
-          img?.category === 'POMPEIUS MAGNUS' ||
-          img?.category === 'SULLA' ||
-          img?.category === 'JULIUS CAESAR'
+          img?.category === 'EXTERIOR' || 
+          img?.category === 'piscina'
         ) || []
-      : galleryImages?.filter(img => img?.category === selectedCategory) || [];
+      : selectedCategory === 'interior'
+        ? galleryImages?.filter(img => 
+            img?.category === 'interior' || 
+            img?.category === 'CASTRUM' || 
+            img?.category === 'LAVATRINA' ||
+            img?.category === 'AGRIPPA' ||
+            img?.category === 'SCIPIO AFRICANUS' ||
+            img?.category === 'GERMANICUS' ||
+            img?.category === 'POMPEIUS MAGNUS' ||
+            img?.category === 'SULLA' ||
+            img?.category === 'JULIUS CAESAR'
+          ) || []
+        : galleryImages?.filter(img => img?.category === selectedCategory) || [];
 
   const openLightbox = (index: number) => {
     setSelectedImage(index);
