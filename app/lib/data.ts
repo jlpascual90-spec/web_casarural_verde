@@ -140,7 +140,7 @@ export const galleryImages = [
     id: 9,
     url: "https://i.imgur.com/4sYZ1vi.jpeg",
     alt: "CASTRUM - Salón-cocina de 65m2 con mesa de comedor grande",
-    category: "CASTUM"
+    category: "CASTRUM"
   },
   {
     id: 10,
