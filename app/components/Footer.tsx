@@ -1,7 +1,7 @@
-
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { propertyData } from "@/lib/data";
 
@@ -14,11 +14,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Información de Contacto */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-3 mb-4">
               <img
                 src="/dux-toledo-logo.png"
                 alt="DUX TOLEDO"
                 className="h-8 w-12 object-contain"
+              />
+              <Image
+                src="/distintivo_4estrellas.png"
+                alt="Casa Rural 4 Estrellas - Castilla-La Mancha"
+                width={40}
+                height={40}
+                className="h-10 w-auto"
               />
               <h3 className="text-lg font-semibold">DUX TOLEDO</h3>
             </div>
