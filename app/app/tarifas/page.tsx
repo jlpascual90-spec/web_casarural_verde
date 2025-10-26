@@ -10,9 +10,9 @@ export const metadata = {
 export default function TarifasPage() {
   const packages = [
     {
-      id: "2-dias",
-      name: "Escapada de 2 Días",
-      duration: "2 días / 1 noche",
+      id: "finde-semana",
+      name: "Fin de Semana",
+      duration: "3 días / 2 noche",
       minStay: "Mínimo 2 noches",
       price: "800€",
       features: [
@@ -20,7 +20,6 @@ export default function TarifasPage() {
         "Check-out: 16:00 H",
         "Toda la casa para su grupo",
         "Uso exclusivo de la piscina",
-        "Parking privado",
         "WiFi gratuito"
       ],
       recommended: false
@@ -36,7 +35,6 @@ export default function TarifasPage() {
         "Check-out: 16:00 H Domingo",
         "Toda la casa para su grupo",
         "Uso exclusivo de la piscina",
-        "Parking privado",
         "WiFi gratuito",
         "Limpieza intermedia incluida",
         "Descuento por estancia larga"
@@ -54,7 +52,6 @@ export default function TarifasPage() {
         "Check-out: 16:00 H Domingo",
         "Toda la casa para su grupo",
         "Uso exclusivo de la piscina",
-        "Parking privado",
         "WiFi gratuito",
         "Limpieza semanal incluida",
         "Máximo descuento aplicado",
@@ -190,7 +187,7 @@ export default function TarifasPage() {
                   📋 Información importante sobre reservas, cancelaciones y normas de la casa:
                 </p>
                 <Link
-                  href="/condiciones-alquiler-normas"
+                  href="/condiciones"
                   className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold"
                 >
                   <FileText className="h-4 w-4" />
@@ -228,16 +225,6 @@ export default function TarifasPage() {
                 <h4 className="font-semibold mb-2">Piscina Privada</h4>
                 <p className="text-sm text-muted-foreground">
                   Piscina vallada de uso exclusivo
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <div className="w-6 h-4 bg-primary rounded opacity-60"></div>
-                </div>
-                <h4 className="font-semibold mb-2">Parking</h4>
-                <p className="text-sm text-muted-foreground">
-                  Aparcamiento privado incluido
                 </p>
               </div>
               
