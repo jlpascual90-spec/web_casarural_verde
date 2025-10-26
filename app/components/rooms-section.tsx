@@ -23,18 +23,6 @@ export function RoomsSection() {
             <RoomCard key={room?.name} room={room} index={index} />
           ))}
         </div>
-
-        <div className="mt-16 text-center animate-fade-in">
-          <div className="bg-card rounded-xl p-8 shadow-elegant border border-border/20">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Capacidad Total
-            </h3>
-            <p className="text-4xl font-bold text-primary mb-2">13 personas</p>
-            <p className="text-muted-foreground">
-              Todas las habitaciones cuentan con armario, escritorio, sillas y ventilador de techo
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -45,9 +33,7 @@ function RoomCard({ room, index }: { room: any; index: number }) {
   const [currentImage, setCurrentImage] = useState(0);
 
   // Filtrar imágenes de esta habitación específica
-  const roomImages = galleryImages.filter(
-    (img) => img.category === room.name
-  );
+  const roomImages = galleryImages.filter((img) => img.category === room.name);
 
   // Rotación automática de imágenes cada 3 segundos
   useEffect(() => {
