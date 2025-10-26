@@ -85,9 +85,10 @@ export function SpacesSection() {
   const poolImages =
     galleryImages?.filter((img) => img?.category === "piscina")?.slice(0, 2) ||
     [];
+  
+  // Filtrar imágenes de EXTERIOR (en mayúsculas)
   const exteriorImages =
-    galleryImages?.filter((img) => img?.category === "exterior")?.slice(0, 2) ||
-    [];
+    galleryImages?.filter((img) => img?.category === "EXTERIOR") || [];
 
   // Importante: categorías en mayúsculas tal como están en data.ts
   const castrumImages =
@@ -142,7 +143,7 @@ export function SpacesSection() {
           </div>
         </div>
 
-        {/* EXTERIOR */}
+        {/* EXTERIOR CON CARRUSEL */}
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="lg:order-2 animate-slide-in-right">
@@ -168,20 +169,13 @@ export function SpacesSection() {
                 </div>
               </div>
             </div>
-            <div className="lg:order-1 grid grid-cols-2 gap-4 animate-slide-in-left">
-              {exteriorImages?.map((image) => (
-                <div
-                  key={image?.id}
-                  className="relative aspect-square bg-gray-200 rounded-lg overflow-hidden"
-                >
-                  <Image
-                    src={image?.url || ""}
-                    alt={image?.alt || "Exterior"}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
+            <div className="lg:order-1 animate-slide-in-left">
+              <ImageCarousel
+                images={exteriorImages}
+                altFallback="Exterior - Ajedrez gigante y zonas de ocio"
+                heightClass="aspect-video"
+                autoMs={3500}
+              />
             </div>
           </div>
         </div>
