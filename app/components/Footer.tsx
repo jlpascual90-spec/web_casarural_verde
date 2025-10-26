@@ -48,6 +48,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/bienvenida" className="hover:text-primary transition-colors">
+                  Bienvenida
+                </Link>
+              </li>
+              <li>
                 <Link href="/galeria" className="hover:text-primary transition-colors">
                   Galería
                 </Link>
@@ -55,6 +60,16 @@ export function Footer() {
               <li>
                 <Link href="/calendario" className="hover:text-primary transition-colors">
                   Calendario
+                </Link>
+              </li>
+              <li>
+                <Link href="/tarifas" className="hover:text-primary transition-colors">
+                  Tarifas
+                </Link>
+              </li>
+              <li>
+                <Link href="/condiciones" className="hover:text-primary transition-colors">
+                  Condiciones
                 </Link>
               </li>
               <li>
@@ -86,7 +101,7 @@ export function Footer() {
               </li>
             </ul>
             <div className="mt-4 text-xs text-muted-foreground">
-              <p>Nº Registro: 45012120175</p>
+              <p>Nº Registro: 45012120399</p>
               <p>María Elena Felpeto Santero</p>
             </div>
           </div>
