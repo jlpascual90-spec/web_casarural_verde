@@ -250,20 +250,32 @@ export const galleryImages = [
   // LAVATRINA - IDs 70-80
   {
     id: 70,
-    url: "https://i.imgur.com/mDWBnYi.jpeg",
+    url: "02_interiores/13 DUX LAVATRINA I.avif",
     alt: "LAVATRINA I - El aseo rinde guiño a las termas romanas.",
     category: "LAVATRINA"
   },
   {
     id: 71,
-    url: "https://i.imgur.com/0YEUJC1.jpeg",
+    url: "02_interiores/20 DUX LAVATRINA II.avif",
     alt: "LAVATRINA II - Aseo amplio y adaptado.",
     category: "LAVATRINA"
   },
   {
     id: 72,
-    url: "https://i.imgur.com/4cnxZ0F.jpeg",
+    url: "02_interiores/22 DUX LAVATRINA III.avif",
     alt: "LAVATRINA III - Aseo práctico y luminoso que invita a cuidarse tras un día de aventuras.",
+    category: "LAVATRINA"
+  },
+  {
+    id: 73,
+    url: "02_interiores/14 DUX LAVATRINA I.avif",
+    alt: "LAVATRINA I - Termas romanas completamentes equipadas.",
+    category: "LAVATRINA"
+  },
+  {
+    id: 74,
+    url: "02_interiores/16 DUX LAVATRINA I.avif",
+    alt: "LAVATRINA I - Aseo con cuidados detalles",
     category: "LAVATRINA"
   },
   
