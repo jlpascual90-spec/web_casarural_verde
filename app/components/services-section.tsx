@@ -1,7 +1,7 @@
-
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { 
   Thermometer, 
   Shield, 
@@ -13,7 +13,11 @@ import {
   Star,
   Mountain,
   Camera,
-  Castle
+  Castle,
+  Award,
+  Landmark,
+  TreePine,
+  Wind
 } from "lucide-react";
 
 export function ServicesSection() {
@@ -160,13 +164,27 @@ export function ServicesSection() {
         </div>
 
         {/* ALREDEDORES */}
-        <div className="mb-12">
+        <div className="mb-16">
           <h3 className="text-2xl font-bold text-foreground mb-8 text-center flex items-center justify-center">
             <Mountain className="h-6 w-6 text-primary mr-3" />
             ALREDEDORES - LUGARES DE INTERÉS
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Toledo Centro */}
+            <div className="bg-card rounded-lg p-6 shadow-elegant border border-border/20 hover:shadow-elegant-lg transition-all duration-300">
+              <div className="flex items-center mb-3">
+                <Castle className="h-8 w-8 text-amber-600 mr-3" />
+                <div>
+                  <h4 className="font-semibold">Toledo Histórico</h4>
+                  <p className="text-xs text-muted-foreground">12 minutos</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Ciudad de las Tres Culturas, Patrimonio UNESCO. Catedral Primada, Alcázar, Sinagoga del Tránsito, Mezquita del Cristo de la Luz.
+              </p>
+            </div>
+
             {/* Puy du Fou */}
             <div className="bg-card rounded-lg p-6 shadow-elegant border border-border/20 hover:shadow-elegant-lg transition-all duration-300">
               <div className="flex items-center mb-3">
@@ -183,42 +201,70 @@ export function ServicesSection() {
               </p>
             </div>
 
-            {/* Toledo Centro */}
+            {/* Molinos de Consuegra */}
             <div className="bg-card rounded-lg p-6 shadow-elegant border border-border/20 hover:shadow-elegant-lg transition-all duration-300">
               <div className="flex items-center mb-3">
-                <Castle className="h-8 w-8 text-amber-600 mr-3" />
+                <Wind className="h-8 w-8 text-blue-600 mr-3" />
                 <div>
-                  <h4 className="font-semibold">Toledo Histórico</h4>
-                  <p className="text-xs text-muted-foreground">12 minutos</p>
+                  <h4 className="font-semibold">Molinos de Consuegra</h4>
+                  <p className="text-xs text-muted-foreground">45 minutos</p>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">
-                Ciudad de las Tres Culturas, Patrimonio de la Humanidad. Catedral, Alcázar, Barrio Judío.
+                Icónicos molinos de viento manchegos. Ruta del Quijote con vistas espectaculares y castillo medieval.
               </p>
             </div>
 
-            {/* Otros lugares */}
+            {/* Aranjuez */}
             <div className="bg-card rounded-lg p-6 shadow-elegant border border-border/20 hover:shadow-elegant-lg transition-all duration-300">
               <div className="flex items-center mb-3">
-                <Camera className="h-8 w-8 text-green-600 mr-3" />
+                <Landmark className="h-8 w-8 text-green-600 mr-3" />
                 <div>
-                  <h4 className="font-semibold">Rutas Turísticas</h4>
-                  <p className="text-xs text-muted-foreground">&lt; 1 hora</p>
+                  <h4 className="font-semibold">Palacio de Aranjuez</h4>
+                  <p className="text-xs text-muted-foreground">45 minutos</p>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">
-                Carranque, Los Grecos de Illescas, Castillos de los Montes, Cabañeros, Ruta del Quijote, Aranjuez.
+                Patrimonio UNESCO. Palacio Real, jardines históricos y paisaje cultural declarado Patrimonio de la Humanidad.
+              </p>
+            </div>
+
+            {/* Parque Nacional Cabañeros */}
+            <div className="bg-card rounded-lg p-6 shadow-elegant border border-border/20 hover:shadow-elegant-lg transition-all duration-300">
+              <div className="flex items-center mb-3">
+                <TreePine className="h-8 w-8 text-emerald-600 mr-3" />
+                <div>
+                  <h4 className="font-semibold">P.N. Cabañeros</h4>
+                  <p className="text-xs text-muted-foreground">1h 15min</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Safari ibérico. Observación de fauna salvaje: ciervos, jabalíes, águilas imperiales en su hábitat natural.
+              </p>
+            </div>
+
+            {/* Carranque */}
+            <div className="bg-card rounded-lg p-6 shadow-elegant border border-border/20 hover:shadow-elegant-lg transition-all duration-300">
+              <div className="flex items-center mb-3">
+                <Camera className="h-8 w-8 text-purple-600 mr-3" />
+                <div>
+                  <h4 className="font-semibold">Parque Arq. Carranque</h4>
+                  <p className="text-xs text-muted-foreground">30 minutos</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Villas romanas del siglo IV con mosaicos excepcionales. Uno de los yacimientos romanos más importantes de España.
               </p>
             </div>
           </div>
 
           {/* Lista completa de lugares */}
           <div className="mt-8 bg-muted/30 rounded-lg p-6">
-            <h4 className="font-semibold mb-4">Lugares de Interés Cercanos (menos de 1 hora)</h4>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+            <h4 className="font-semibold mb-4">Más Lugares de Interés Cercanos</h4>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 text-sm">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Parque Arqueológico Carranque</span>
+                <span>Campo de Criptana</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -226,27 +272,91 @@ export function ServicesSection() {
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Castillos Montes de Toledo</span>
+                <span>Castillo de Guadamur</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Parque Nacional Cabañeros</span>
+                <span>Barrancas de Burujón</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Lagunas de Villafranca</span>
+                <span>Castillo de Belmonte</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Ruta del Quijote</span>
+                <span>El Toboso</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Consuegra - Campo Criptana</span>
+                <span>Tembleque</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Palacio de Aranjuez</span>
+                <span>Chinchón</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <span>Ocaña</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <span>Castillo de Oropesa</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <span>Talavera de la Reina</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <span>Montes de Toledo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* DISTINTIVO 4 ESTRELLAS */}
+        <div className="mt-16">
+          <div className="bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-950/20 dark:to-yellow-950/20 rounded-xl p-8 shadow-elegant border-2 border-amber-200 dark:border-amber-800">
+            <div className="flex flex-col lg:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <div className="relative w-48 h-48 bg-white dark:bg-card rounded-lg p-4 shadow-lg">
+                  <Image
+                    src="/distintivo_4estrellas.png"
+                    alt="Distintivo 4 Estrellas Casas Rurales - DUX TOLEDO"
+                    fill
+                    className="object-contain p-2"
+                  />
+                </div>
+              </div>
+              
+              <div className="flex-1 text-center lg:text-left">
+                <div className="flex items-center justify-center lg:justify-start mb-4">
+                  <Award className="h-8 w-8 text-amber-600 mr-3" />
+                  <h3 className="text-2xl font-bold text-foreground">
+                    Calidad Certificada
+                  </h3>
+                </div>
+                
+                <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+                  DUX TOLEDO cuenta con el <strong className="text-amber-700 dark:text-amber-500">Distintivo de 4 Estrellas</strong> otorgado por la Junta de Comunidades de Castilla-La Mancha, que certifica la excelencia de nuestras instalaciones y servicios como casa rural.
+                </p>
+                
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                    <Star className="h-4 w-4 fill-current" />
+                    Máxima Categoría
+                  </span>
+                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium">
+                    Calidad Garantizada
+                  </span>
+                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium">
+                    Certificación Oficial
+                  </span>
+                </div>
+                
+                <p className="text-sm text-muted-foreground mt-4 italic">
+                  Este distintivo avala nuestro compromiso con la calidad, el confort y la satisfacción de nuestros huéspedes.
+                </p>
               </div>
             </div>
           </div>

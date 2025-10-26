@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -16,10 +15,86 @@ import {
 } from "lucide-react";
 import { propertyData, galleryImages } from "@/lib/data";
 
+// Carrusel simple reutilizable
+function ImageCarousel({
+  images,
+  altFallback,
+  heightClass = "aspect-video",
+  autoMs = 3000,
+}: {
+  images: { id: number; url: string; alt?: string }[];
+  altFallback: string;
+  heightClass?: string;
+  autoMs?: number;
+}) {
+  const [current, setCurrent] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!images?.length) return;
+    const t = setInterval(() => {
+      setCurrent((p) => (p + 1) % images.length);
+    }, autoMs);
+    return () => clearInterval(t);
+  }, [images?.length, autoMs]);
+
+  if (!images?.length) {
+    return (
+      <div className={`relative ${heightClass} bg-gray-200 rounded-lg overflow-hidden`} />
+    );
+  }
+
+  return (
+    <div className={`relative ${heightClass} bg-gray-200 rounded-lg overflow-hidden`}>
+      {images.map((img, i) => (
+        <div
+          key={img.id}
+          className={`absolute inset-0 transition-opacity duration-700 ${
+            i === current ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Image
+            src={img.url}
+            alt={img.alt || altFallback}
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority={i === 0}
+          />
+        </div>
+      ))}
+      {/* Indicadores */}
+      {images.length > 1 && (
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              aria-label={`Ver imagen ${i + 1}`}
+              onClick={() => setCurrent(i)}
+              className={`h-1.5 rounded-full transition-all ${
+                i === current ? "bg-white w-6" : "bg-white/60 w-1.5"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function SpacesSection() {
-  const poolImages = galleryImages?.filter(img => img?.category === "piscina")?.slice(0, 2) || [];
-  const exteriorImages = galleryImages?.filter(img => img?.category === "exterior")?.slice(0, 2) || [];
-  const castrumImages = galleryImages?.filter(img => img?.category === "castrum") || [];
+  const poolImages =
+    galleryImages?.filter((img) => img?.category === "piscina")?.slice(0, 2) ||
+    [];
+  
+  // Filtrar imágenes de EXTERIOR (en mayúsculas)
+  const exteriorImages =
+    galleryImages?.filter((img) => img?.category === "EXTERIOR") || [];
+
+  // Importante: categorías en mayúsculas tal como están en data.ts
+  const castrumImages =
+    galleryImages?.filter((img) => img?.category === "CASTRUM") || [];
+  const lavatrinaImages =
+    galleryImages?.filter((img) => img?.category === "LAVATRINA") || [];
 
   return (
     <section className="py-20 bg-muted/30">
@@ -51,8 +126,11 @@ export function SpacesSection() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4 animate-slide-in-right">
-              {poolImages?.map((image, index) => (
-                <div key={image?.id} className="relative aspect-square bg-gray-200 rounded-lg overflow-hidden">
+              {poolImages?.map((image) => (
+                <div
+                  key={image?.id}
+                  className="relative aspect-square bg-gray-200 rounded-lg overflow-hidden"
+                >
                   <Image
                     src={image?.url || ""}
                     alt={image?.alt || "Piscina"}
@@ -65,7 +143,7 @@ export function SpacesSection() {
           </div>
         </div>
 
-        {/* EXTERIOR */}
+        {/* EXTERIOR CON CARRUSEL */}
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="lg:order-2 animate-slide-in-right">
@@ -91,17 +169,13 @@ export function SpacesSection() {
                 </div>
               </div>
             </div>
-            <div className="lg:order-1 grid grid-cols-2 gap-4 animate-slide-in-left">
-              {exteriorImages?.map((image, index) => (
-                <div key={image?.id} className="relative aspect-square bg-gray-200 rounded-lg overflow-hidden">
-                  <Image
-                    src={image?.url || ""}
-                    alt={image?.alt || "Exterior"}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
+            <div className="lg:order-1 animate-slide-in-left">
+              <ImageCarousel
+                images={exteriorImages}
+                altFallback="Exterior - Ajedrez gigante y zonas de ocio"
+                heightClass="aspect-video"
+                autoMs={3500}
+              />
             </div>
           </div>
         </div>
@@ -119,19 +193,19 @@ export function SpacesSection() {
               </p>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full" />
                   <span>65 m² de espacio</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full" />
                   <span>Cocina equipada</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full" />
                   <span>Mesa gran comedor</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full" />
                   <span>Zona de TV</span>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -145,16 +219,12 @@ export function SpacesSection() {
               </div>
             </div>
             <div className="animate-slide-in-right">
-              {castrumImages?.length > 0 && (
-                <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                  <Image
-                    src={castrumImages[0]?.url || ""}
-                    alt={castrumImages[0]?.alt || "CASTRUM"}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              )}
+              <ImageCarousel
+                images={castrumImages}
+                altFallback="CASTRUM"
+                heightClass="aspect-video"
+                autoMs={3500}
+              />
             </div>
           </div>
         </div>
@@ -169,6 +239,17 @@ export function SpacesSection() {
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               {propertyData?.spaces?.lavatrina?.description}
             </p>
+
+            {/* Carrusel LAVATRINA */}
+            <div className="mb-8">
+              <ImageCarousel
+                images={lavatrinaImages}
+                altFallback="LAVATRINA"
+                heightClass="aspect-video"
+                autoMs={3000}
+              />
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center p-4 bg-muted/50 rounded-lg">
                 <Bath className="h-8 w-8 mx-auto mb-2 text-primary" />
@@ -177,7 +258,7 @@ export function SpacesSection() {
               </div>
               <div className="text-center p-4 bg-muted/50 rounded-lg">
                 <div className="h-8 w-8 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 bg-primary rounded-full"></div>
+                  <div className="w-4 h-4 bg-primary rounded-full" />
                 </div>
                 <h4 className="font-semibold mb-1">Suelo Continuo</h4>
                 <p className="text-sm text-muted-foreground">Platos de ducha modernos</p>

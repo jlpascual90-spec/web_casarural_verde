@@ -1,17 +1,18 @@
-
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Images, Calendar, Phone, Menu, X, Euro } from "lucide-react";
+import { Home, Images, Calendar, Phone, Menu, X, Euro, FileText, BookOpen } from "lucide-react";
 import { useState } from "react";
 import { ThemeToggle } from "./theme-toggle";
 
 const navItems = [
   { href: "/", label: "Inicio", icon: Home },
+  { href: "/bienvenida", label: "Bienvenida", icon: BookOpen },
   { href: "/galeria", label: "Galería", icon: Images },
   { href: "/calendario", label: "Calendario", icon: Calendar },
   { href: "/tarifas", label: "Tarifas", icon: Euro },
+  { href: "/condiciones", label: "Condiciones", icon: FileText },
   { href: "/contacto", label: "Contacto", icon: Phone },
 ];
 

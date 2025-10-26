@@ -1,7 +1,7 @@
-
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { propertyData } from "@/lib/data";
 
@@ -14,11 +14,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Información de Contacto */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-3 mb-4">
               <img
                 src="/dux-toledo-logo.png"
                 alt="DUX TOLEDO"
                 className="h-8 w-12 object-contain"
+              />
+              <Image
+                src="/distintivo_4estrellas.png"
+                alt="Casa Rural 4 Estrellas - Castilla-La Mancha"
+                width={40}
+                height={40}
+                className="h-10 w-auto"
               />
               <h3 className="text-lg font-semibold">DUX TOLEDO</h3>
             </div>
@@ -48,6 +55,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/bienvenida" className="hover:text-primary transition-colors">
+                  Bienvenida
+                </Link>
+              </li>
+              <li>
                 <Link href="/galeria" className="hover:text-primary transition-colors">
                   Galería
                 </Link>
@@ -55,6 +67,16 @@ export function Footer() {
               <li>
                 <Link href="/calendario" className="hover:text-primary transition-colors">
                   Calendario
+                </Link>
+              </li>
+              <li>
+                <Link href="/tarifas" className="hover:text-primary transition-colors">
+                  Tarifas
+                </Link>
+              </li>
+              <li>
+                <Link href="/condiciones" className="hover:text-primary transition-colors">
+                  Condiciones
                 </Link>
               </li>
               <li>
@@ -86,7 +108,7 @@ export function Footer() {
               </li>
             </ul>
             <div className="mt-4 text-xs text-muted-foreground">
-              <p>Nº Registro: 45012120175</p>
+              <p>Nº Registro: 45012120399</p>
               <p>María Elena Felpeto Santero</p>
             </div>
           </div>

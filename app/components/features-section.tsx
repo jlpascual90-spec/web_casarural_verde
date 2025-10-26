@@ -70,7 +70,7 @@ export function FeaturesSection() {
         <div className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8 text-center animate-fade-in">
           <div className="bg-card rounded-lg p-8 shadow-elegant">
             <div className="text-3xl font-bold text-primary mb-2 animate-counter">
-              13
+              12
             </div>
             <p className="text-muted-foreground">Capacidad máxima</p>
           </div>

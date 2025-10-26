@@ -53,9 +53,9 @@ export const propertyData = {
     },
     {
       name: "SULLA",
-      type: "Habitación Triple",
-      description: "Habitación triple equipada con tres camas individuales, tres mesillas, armario con espejo, escritorio, tres sillas y ventilador de techo.",
-      capacity: 3
+      type: "Habitación Doble",
+      description: "Habitación doble equipada con dos camas individuales y una cama supletoria, tres mesillas, armario con espejo, escritorio, tres sillas y ventilador de techo.",
+      capacity: 2
     },
     {
       name: "JULIUS CAESAR",
@@ -140,7 +140,7 @@ export const galleryImages = [
     id: 9,
     url: "https://i.imgur.com/4sYZ1vi.jpeg",
     alt: "CASTRUM - Salón-cocina de 65m2 con mesa de comedor grande",
-    category: "CASTUM"
+    category: "CASTRUM"
   },
   {
     id: 10,
@@ -299,4 +299,4 @@ export const monthNames = [
   'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
 ];
 
-export const dayNames = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+export const dayNames = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];

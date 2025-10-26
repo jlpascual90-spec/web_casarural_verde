@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -132,26 +131,6 @@ Detalles de mi consulta:
             </div>
           </div>
         </div>
-
-        <div className="bg-accent/30 rounded-lg p-6">
-          <h3 className="text-lg font-semibold text-card-foreground mb-3">
-            Horario de Atención
-          </h3>
-          <div className="space-y-2 text-muted-foreground">
-            <div className="flex justify-between">
-              <span>Lunes - Viernes:</span>
-              <span>9:00 - 20:00</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Sábados:</span>
-              <span>10:00 - 18:00</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Domingos:</span>
-              <span>10:00 - 16:00</span>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Contact Form */}
@@ -273,6 +252,10 @@ Detalles de mi consulta:
                 <option value="6">6 personas</option>
                 <option value="7">7 personas</option>
                 <option value="8">8 personas</option>
+                <option value="9">9 personas</option>
+                <option value="10">10 personas</option>
+                <option value="11">11 personas</option>
+                <option value="12">12 personas</option>
               </select>
             </div>
 
