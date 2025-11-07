@@ -41,15 +41,30 @@ export function ServicesSection() {
     <section className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* DISTINTIVO 4 ESTRELLAS */}
-        <div className="flex justify-center mb-12">
-          <Image
-            src="/distintivo_4estrellas.png"
-            alt="Distintivo 4 Estrellas - Casas Rurales Castilla-La Mancha"
-            width={300}
-            height={200}
-            className="object-contain"
-            priority
-          />
+        <div className="mb-16 bg-card rounded-lg shadow-lg p-8 border-2 border-primary/20">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            {/* Imagen del distintivo */}
+            <div className="flex-shrink-0">
+              <Image
+                src="/distintivo_4estrellas.png"
+                alt="Distintivo 4 Estrellas - Casas Rurales Castilla-La Mancha"
+                width={200}
+                height={150}
+                className="object-contain"
+                priority
+              />
+            </div>
+            
+            {/* Texto explicativo */}
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-2xl font-bold text-primary mb-4">
+                Categoría Alta
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                DUX by TOLEDO está inscrita en el Registro de Empresas y Establecimientos Turísticos de Castilla-La Mancha con número de registro <strong>45012120399</strong> y categoría de <strong className="text-amber-700 dark:text-amber-500">4 Estrellas Verdes</strong>, que certifica la excelencia de nuestras instalaciones y servicios como casa rural.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Título de la sección */}
