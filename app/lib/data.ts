@@ -239,8 +239,20 @@ export const galleryImages = [
   // SULLA - IDs 51-55
   {
     id: 51,
-    url: "https://i.imgur.com/Nh2udIU.jpeg",
+    url: "/02_interiores/60 DUX SULLA.avif",
     alt: "SULLA - Habitación doble, refugio fresco y acogedor.",
+    category: "SULLA"
+  },
+  {
+    id: 52,
+    url: "/02_interiores/57 DUX SULLA.avif",
+    alt: "SULLA - Escritorio y luz ambiental.",
+    category: "SULLA"
+  },
+  {
+    id: 53,
+    url: "/02_interiores/59 DUX SULLA.avif",
+    alt: "SULLA - Habitación doble, detalles cuidados.",
     category: "SULLA"
   },
   
