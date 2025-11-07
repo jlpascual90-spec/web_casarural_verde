@@ -55,7 +55,7 @@ export const propertyData = {
       name: "SULLA",
       type: "Habitación Doble",
       description: "Habitación doble equipada con dos camas individuales y una cama supletoria, tres mesillas, armario con espejo, escritorio, tres sillas y ventilador de techo.",
-      capacity: 2
+      capacity: 2+1
     },
     {
       name: "JULIUS CAESAR",
