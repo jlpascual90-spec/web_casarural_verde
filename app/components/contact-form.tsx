@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Mail, Phone, MessageSquare, Send, Check, AlertCircle } from "lucide-react";
 import { propertyData } from "@/lib/data";
+import Link from "next/link";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ export function ContactForm() {
     huespedes: '',
     mensaje: ''
   });
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -27,6 +29,12 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!privacyAccepted) {
+      alert('Debes aceptar la Política de Privacidad para enviar el formulario.');
+      return;
+    }
+    
     setIsSubmitting(true);
     
     try {
@@ -45,6 +53,7 @@ export function ContactForm() {
         huespedes: '',
         mensaje: ''
       });
+      setPrivacyAccepted(false);
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -53,20 +62,7 @@ export function ContactForm() {
   };
 
   const generateWhatsAppUrl = () => {
-    const message = `¡Hola! Me interesa reservar DUX TOLEDO. 
-    
-Detalles de mi consulta:
-- Nombre: ${formData.nombre || 'No especificado'}
-- Email: ${formData.email || 'No especificado'}
-- Teléfono: ${formData.telefono || 'No especificado'}
-- Fecha entrada: ${formData.fechaEntrada || 'No especificada'}
-- Fecha salida: ${formData.fechaSalida || 'No especificada'}
-- Número de huéspedes: ${formData.huespedes || 'No especificado'}
-- Mensaje: ${formData.mensaje || 'Sin mensaje adicional'}
-
-¡Espero su respuesta!`;
-    
-    return `https://wa.me/${propertyData?.contact?.whatsapp?.replace('+', '')}?text=${encodeURIComponent(message)}`;
+    return "https://wa.me/34687765315?text=Hola,%20quiero%20información%20sobre%20DUX%20TOLEDO";
   };
 
   return (
@@ -274,10 +270,43 @@ Detalles de mi consulta:
               />
             </div>
 
+            {/* Checkbox de Política de Privacidad */}
+            <div className="p-4 bg-muted/30 rounded-lg border border-border">
+              <div className="flex items-start space-x-3">
+                <input
+                  type="checkbox"
+                  id="privacyPolicy"
+                  checked={privacyAccepted}
+                  onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                  className="mt-1 h-4 w-4 rounded border-input text-primary focus:ring-2 focus:ring-primary"
+                  required
+                />
+                <label htmlFor="privacyPolicy" className="text-sm text-card-foreground">
+                  He leído y acepto el{" "}
+                  <Link 
+                    href="/legal/aviso-legal" 
+                    className="text-primary hover:underline font-medium"
+                    target="_blank"
+                  >
+                    Aviso legal
+                  </Link>
+                  {" "}y la{" "}
+                  <Link 
+                    href="/legal/politica-de-privacidad" 
+                    className="text-primary hover:underline font-medium"
+                    target="_blank"
+                  >
+                    Política de privacidad
+                  </Link>
+                  .
+                </label>
+              </div>
+            </div>
+
             <div className="space-y-4">
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isSubmitting || !privacyAccepted}
                 className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
                 {isSubmitting ? (
