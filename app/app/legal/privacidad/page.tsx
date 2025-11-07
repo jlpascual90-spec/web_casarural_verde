@@ -1,4 +1,3 @@
-
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
@@ -24,12 +23,12 @@ export default function PrivacidadPage() {
           
           <div className="bg-card rounded-lg p-8 shadow-sm space-y-6">
             <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">1. Responsable del Tratamiento</h2>
+              <h2 className="text-xl font-semibold mb-4 text-primary">Responsable del Tratamiento</h2>
               <div className="bg-accent/20 p-4 rounded-lg">
                 <ul className="space-y-2 text-card-foreground">
                   <li><strong>Responsable:</strong> María Elena Felpeto Santero</li>
                   <li><strong>NIF:</strong> 03875034V</li>
-                  <li><strong>Domicilio:</strong> Bargas, Toledo</li>
+                  <li><strong>Domicilio:</strong> Calle Matemáticas, 1 - Olías Del Rey - 45280 (Toledo)</li>
                   <li><strong>Email:</strong> casarural@duxtoledo.com</li>
                   <li><strong>Teléfono:</strong> +34 687 765 315</li>
                 </ul>
@@ -37,99 +36,117 @@ export default function PrivacidadPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">2. Finalidad del Tratamiento</h2>
+              <h2 className="text-xl font-semibold mb-4 text-primary">Finalidad y Legitimación</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Los datos personales que nos proporcione serán tratados para las siguientes finalidades:
+                Los datos personales que se recaban serán tratados con la finalidad de gestionar las 
+                reservas, la facturación, la atención a los clientes y el cumplimiento de las obligaciones 
+                legales derivadas de la relación contractual.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                La base jurídica que legitima este tratamiento es:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Gestión de reservas y prestación de servicios de alojamiento</li>
-                <li>Comunicación con los clientes y respuesta a sus consultas</li>
-                <li>Cumplimiento de obligaciones legales y fiscales</li>
-                <li>Envío de información comercial (previa autorización)</li>
-                <li>Mejora de nuestros servicios</li>
+                <li>
+                  <strong>La ejecución de un contrato</strong> (art. 6.1.b RGPD), en relación con la reserva 
+                  y prestación de servicios de alojamiento.
+                </li>
+                <li>
+                  <strong>El cumplimiento de obligaciones legales</strong> (art. 6.1.c RGPD), especialmente 
+                  las relacionadas con normativa fiscal, contable y de registro de viajeros (Real Decreto 
+                  933/2021, de 26 de octubre).
+                </li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">3. Legitimación</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                El tratamiento de sus datos personales se basa en las siguientes bases jurídicas:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground mt-4">
-                <li><strong>Ejecución contractual:</strong> Para la gestión de reservas y prestación del servicio</li>
-                <li><strong>Obligación legal:</strong> Para el cumplimiento de obligaciones fiscales y de registro de huéspedes</li>
-                <li><strong>Consentimiento:</strong> Para el envío de comunicaciones comerciales</li>
-                <li><strong>Interés legítimo:</strong> Para la mejora de nuestros servicios</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">4. Conservación de los Datos</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Los datos personales se conservarán durante los siguientes plazos:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground mt-4">
-                <li>Datos de reserva: Durante la prestación del servicio y posteriormente durante 6 años para el cumplimiento de obligaciones fiscales</li>
-                <li>Datos de registro de huéspedes: 3 años según la normativa de seguridad ciudadana</li>
-                <li>Consentimientos para comunicaciones comerciales: Hasta que revoque su consentimiento</li>
-                <li>Datos de contacto: Mientras mantenga relación comercial con nosotros</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">5. Destinatarios de los Datos</h2>
+              <h2 className="text-xl font-semibold mb-4 text-primary">Destinatarios</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Sus datos personales podrán ser comunicados a:
+                Los datos podrán ser comunicados a:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Organismos públicos cuando exista una obligación legal</li>
-                <li>Entidades financieras para la gestión de pagos</li>
-                <li>Proveedores de servicios tecnológicos (hosting, mantenimiento web)</li>
-                <li>Asesores fiscales y contables</li>
-                <li>Fuerzas y Cuerpos de Seguridad del Estado cuando sea legalmente requerido</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">6. Derechos del Interesado</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Usted tiene derecho a:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li><strong>Acceso:</strong> Conocer qué datos tenemos sobre usted</li>
-                <li><strong>Rectificación:</strong> Corregir datos inexactos o incompletos</li>
-                <li><strong>Supresión:</strong> Solicitar la eliminación de sus datos</li>
-                <li><strong>Limitación:</strong> Restringir el tratamiento de sus datos</li>
-                <li><strong>Portabilidad:</strong> Recibir sus datos en formato estructurado</li>
-                <li><strong>Oposición:</strong> Oponerse al tratamiento de sus datos</li>
-                <li><strong>Revocación del consentimiento:</strong> Retirar su consentimiento en cualquier momento</li>
+                <li>
+                  <strong>Fuerzas y Cuerpos de Seguridad del Estado</strong>, en cumplimiento del RD 933/2021, 
+                  mediante los sistemas habilitados por el Ministerio del Interior.
+                </li>
+                <li>
+                  <strong>La Administración Tributaria y otras autoridades competentes</strong>, cuando sea 
+                  legalmente exigible.
+                </li>
+                <li>
+                  <strong>Entidades bancarias</strong>, para la gestión de cobros y pagos.
+                </li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                Para ejercer estos derechos, puede contactarnos en: <strong>casarural@duxtoledo.com</strong>
+                No se prevén cesiones de datos a terceros distintos de los mencionados, ni se realizan 
+                transferencias internacionales de datos.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">7. Medidas de Seguridad</h2>
+              <h2 className="text-xl font-semibold mb-4 text-primary">Plazos de Conservación</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Los datos personales se conservarán durante:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                <li>
+                  Mientras dure la relación contractual y sea necesario para la prestación del servicio.
+                </li>
+                <li>
+                  Posteriormente, se conservarán durante los plazos exigidos por la normativa fiscal y 
+                  contable (generalmente 5 a 6 años desde la finalización de la relación).
+                </li>
+                <li>
+                  3 años desde el registro de entrada de los viajeros, conforme al art. 7.2 del RD 933/2021.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold mb-4 text-primary">Derechos de las Personas Interesadas</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Podrá ejercer sus derechos de acceso, rectificación, supresión, oposición, limitación del 
+                tratamiento y portabilidad de sus datos, enviando una solicitud por escrito a la dirección 
+                postal o electrónica indicada del responsable.
+              </p>
+              <div className="bg-accent/20 p-4 rounded-lg">
+                <p className="text-card-foreground">
+                  <strong>Email:</strong>{" "}
+                  <a href="mailto:casarural@duxtoledo.com" className="text-primary hover:underline">
+                    casarural@duxtoledo.com
+                  </a>
+                </p>
+                <p className="text-card-foreground mt-2">
+                  <strong>Dirección postal:</strong> Calle Matemáticas, 1 - Olías Del Rey - 45280 (Toledo)
+                </p>
+              </div>
+              <p className="text-muted-foreground leading-relaxed mt-4">
+                Asimismo, tiene derecho a presentar una reclamación ante la{" "}
+                <a 
+                  href="https://www.aepd.es" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  Agencia Española de Protección de Datos
+                </a>{" "}
+                (www.aepd.es) si considera que el tratamiento de sus datos no se ajusta a la normativa vigente.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold mb-4 text-primary">Transferencias Internacionales</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                No se realizan transferencias internacionales de datos fuera del Espacio Económico Europeo.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-semibold mb-4 text-primary">Medidas de Seguridad</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Hemos adoptado las medidas técnicas y organizativas necesarias para garantizar la seguridad 
-                de sus datos personales y evitar su alteración, pérdida, tratamiento o acceso no autorizado.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">8. Modificaciones</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Esta Política de Privacidad puede ser modificada. Le recomendamos revisar periódicamente 
-                esta página para estar informado de los cambios.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">9. Autoridad de Control</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Si considera que el tratamiento de sus datos no se ajusta a la normativa, puede dirigir 
-                una reclamación a la Agencia Española de Protección de Datos (www.aepd.es).
+                de sus datos personales y evitar su alteración, pérdida, tratamiento o acceso no autorizado, 
+                de acuerdo con lo establecido en el Reglamento General de Protección de Datos (RGPD) y la 
+                normativa española aplicable.
               </p>
             </section>
 
