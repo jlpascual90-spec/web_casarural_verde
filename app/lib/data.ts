@@ -1,4 +1,3 @@
-
 // Datos de DUX TOLEDO - Casa Rural de Lujo
 export const propertyData = {
   name: "DUX TOLEDO",
@@ -85,153 +84,209 @@ export const propertyData = {
 };
 
 export const galleryImages = [
-  // PISCINA - 2 fotos
+  // PISCINA - IDs 1-10
   {
     id: 1,
-    url: "https://i.imgur.com/TkKMA6d.jpeg",
+    url: "/01_exteriores/69.avif",
     alt: "Piscina de 8x4 metros con mosaico azul y agua cristalina, un espacio luminoso y refrescante.",
     category: "piscina"
   },
   {
     id: 2,
-    url: "https://i.imgur.com/Etu0P0h.jpeg",
+    url: "/01_exteriores/71 DUX EXTERIORES.avif",
     alt: "Zona de piscina con tumbonas y área para tomar el sol",
     category: "piscina"
   },
- // EXTERIOR - 5 fotos
+  
+  // EXTERIOR - IDs 11-20
   {
-    id: 3,
-    url: "https://i.imgur.com/qevEXnG.jpeg",
+    id: 11,
+    url: "/01_exteriores/65 DUX EXTERIORES.avif",
     alt: "Amplia terraza con mesa de ping‑pong, larga mesa de comedor al aire libre y fachada de piedra; un espacio soleado ideal para reuniones y ocio.",
-    category: "exterior"
+    category: "EXTERIOR"
   },
   {
-    id: 4,
-    url: "https://i.imgur.com/9wORP03.jpeg",
+    id: 12,
+    url: "/01_exteriores/83 DUX EXTERIORES.avif",
     alt: "Espacio de barbacoa totalmente equipado con fregadero, encimera y armarios, ideal para cocinar al aire libre.",
-    category: "exterior"
+    category: "EXTERIOR"
   },
   {
-    id: 5,
-    url: "https://i.imgur.com/Tzw2J58.jpeg",
+    id: 13,
+    url: "/01_exteriores/84 DUX EXTERIORES.avif",
     alt: "Zona de barbacoa y cocina exterior",
-    category: "exterior"
+    category: "EXTERIOR"
   },
   {
-    id: 6,
-    url: "https://i.imgur.com/YvWFnD1.jpeg",
+    id: 14,
+    url: "/01_exteriores/78 DUX EXTERIORES.avif",
     alt: "Ajedrez gigante de exterior y mesa de ping pong en el jardín",
-    category: "exterior"
+    category: "EXTERIOR"
   },
   {
-    id: 7,
-    url: "https://i.imgur.com/GmIjeBe.jpeg",
+    id: 15,
+    url: "/01_exteriores/66 DUX EXTERIORES.avif",
     alt: "Detalle decorativo con bidón lechero y aceitero antiguos, toque auténtico y rural en los exteriores.",
-    category: "exterior"
+    category: "EXTERIOR"
   },
   {
-    id: 8,
-    url: "https://i.imgur.com/0gcdG7t.jpeg",
+    id: 16,
+    url: "/01_exteriores/77 DUX EXTERIORES.avif",
     alt: "Patio con un rincón cuidado y tranquilo para disfrutar al aire libre.",
-    category: "exterior"
+    category: "EXTERIOR"
   },
-  // CASTRUM - Interior principal - 4 fotos
   {
-    id: 9,
+    id: 17,
+    url: "/01_exteriores/75 DUX EXTERIORES.avif",
+    alt: "Exterior com amplio patio y piscina",
+    category: "EXTERIOR"
+  },
+  {
+    id: 18,
+    url: "/01_exteriores/63 DUX EXTERIORES.avif",
+    alt: "Fachada edificio con detalles cuidados y camino de acceso",
+    category: "EXTERIOR"
+  },  
+  // CASTRUM - IDs 21-30
+  {
+    id: 21,
     url: "https://i.imgur.com/4sYZ1vi.jpeg",
     alt: "CASTRUM - Salón-cocina de 65m2 con mesa de comedor grande",
     category: "CASTRUM"
   },
   {
-    id: 10,
+    id: 22,
     url: "https://i.imgur.com/Pl3hHDP.jpeg",
     alt: "CASTRUM - Espacio cálido para descansar y convivir",
     category: "CASTRUM"
   },
   {
-    id: 11,
+    id: 23,
     url: "https://i.imgur.com/npp2JXc.jpeg",
     alt: "Pared de piedra decorada con relieve heráldico del escudo de Toledo, ambiente luminoso y con encanto",
     category: "CASTRUM"
   },
   {
-    id: 12,
+    id: 24,
     url: "https://i.imgur.com/MX09Nu8.jpeg",
     alt: "Ambiente acogedor y de altos detalles para reuniones relajadas",
     category: "CASTRUM"
   },
-  // Interior habitaciones - 8 fotos
   {
-    id: 13,
-    url: "https://i.imgur.com/L9tFcQS.jpeg",
-    alt: "JULIUS CAESAR - Habitación luminosa con doble cama individual, espacio tranquilo y prácito para descanso reparador.",
-    category: "JULIUS CAESAR"
+    id: 25,
+    url: "/02_interiores/26 DUX CASTRUM.avif",
+    alt: "CASTRUM - Espacio cálido para descansar y convivir",
+    category: "CASTRUM"
   },
   {
-    id: 14,
+    id: 26,
+    url: "/02_interiores/50 DUX CASTRUM.avif",
+    alt: "CASTRUM - Espacio de juegos",
+    category: "CASTRUM"
+  },
+  {
+    id: 27,
+    url: "/02_interiores/101 DUX CASTRUM.avif",
+    alt: "CASTRUM - Detalle máquina recreativa",
+    category: "CASTRUM"
+  },
+  
+  // HABITACIONES - IDs 31-69
+  // JULIUS CAESAR - IDs 31-35
+  {
+    id: 31,
+    url: "https://i.imgur.com/L9tFcQS.jpeg",
+    alt: "JULIUS CAESAR - Habitación luminosa con doble cama individual, espacio tranquilo y práctico para descanso reparador.",
+    category: "JULIUS CAESAR"
+  },
+  
+  // POMPEIUS MAGNUS - IDs 36-40
+  {
+    id: 36,
     url: "https://i.imgur.com/kAs5F4Z.jpeg",
     alt: "POMPEIUS MAGNUS - Detalle cartel entrada a habitación.",
     category: "POMPEIUS MAGNUS"
   },
   {
-    id: 15,
+    id: 37,
     url: "https://i.imgur.com/qYJgxN4.jpeg",
     alt: "POMPEIUS MAGNUS - Habitación doble con pequeño escritorio.",
     category: "POMPEIUS MAGNUS"
   },
+  
+  // SCIPIO AFRICANUS - IDs 41-45
   {
-    id: 16,
+    id: 41,
     url: "https://i.imgur.com/lHtyrLc.jpeg",
     alt: "SCIPIO AFRICANUS - Habitación doble con baño contiguo.",
     category: "SCIPIO AFRICANUS"
   },
+  
+  // AGRIPPA - IDs 46-50
   {
-    id: 17,
+    id: 46,
     url: "https://i.imgur.com/zZ9h6s2.jpeg",
-    alt: "AGRIPA - Habitación doble con pared texturizada.",
+    alt: "AGRIPPA - Habitación doble con pared texturizada.",
     category: "AGRIPPA"
   },
   {
-    id: 18,
+    id: 47,
     url: "https://i.imgur.com/uP54GrO.jpeg",
-    alt: "AGRIPA - Detalle escritorio.",
+    alt: "AGRIPPA - Detalle escritorio.",
     category: "AGRIPPA"
   },
+  
+  // SULLA - IDs 51-55
   {
-    id: 19,
+    id: 51,
     url: "https://i.imgur.com/Nh2udIU.jpeg",
-    alt: "SULLA - Habitación doble, refugio freco y acogedor.",
+    alt: "SULLA - Habitación doble, refugio fresco y acogedor.",
     category: "SULLA"
   },
+  
+  // GERMANICUS - IDs 56-60
   {
-    id: 20,
+    id: 56,
     url: "https://i.imgur.com/amrpnk1.jpeg",
-    alt: "GERMANICUS - Habitación doble, con cama supletoria, inspidada en la serenidad de los campamentos romanos.",
+    alt: "GERMANICUS - Habitación triple, con cama supletoria, inspirada en la serenidad de los campamentos romanos.",
     category: "GERMANICUS"
   },
-  // Interior baños - 3 fotos
+  
+  // LAVATRINA - IDs 70-80
   {
-    id: 21,
-    url: "https://i.imgur.com/mDWBnYi.jpeg",
+    id: 70,
+    url: "02_interiores/13 DUX LAVATRINA I.avif",
     alt: "LAVATRINA I - El aseo rinde guiño a las termas romanas.",
     category: "LAVATRINA"
   },
   {
-    id: 22,
-    url: "https://i.imgur.com/0YEUJC1.jpeg",
-    alt: "LAVATRINA II - Aseo ámplio y adaptado.",
+    id: 71,
+    url: "02_interiores/20 DUX LAVATRINA II.avif",
+    alt: "LAVATRINA II - Aseo amplio y adaptado.",
     category: "LAVATRINA"
   },
   {
-    id: 23,
-    url: "https://i.imgur.com/4cnxZ0F.jpeg",
+    id: 72,
+    url: "02_interiores/22 DUX LAVATRINA III.avif",
     alt: "LAVATRINA III - Aseo práctico y luminoso que invita a cuidarse tras un día de aventuras.",
     category: "LAVATRINA"
   },
-  
-  // LOCALIZACIÓN - 3 fotos
   {
-    id: 51,
+    id: 73,
+    url: "02_interiores/14 DUX LAVATRINA I.avif",
+    alt: "LAVATRINA I - Termas romanas completamentes equipadas.",
+    category: "LAVATRINA"
+  },
+  {
+    id: 74,
+    url: "02_interiores/16 DUX LAVATRINA I.avif",
+    alt: "LAVATRINA I - Aseo con cuidados detalles",
+    category: "LAVATRINA"
+  },
+  
+  // LOCALIZACIÓN - IDs 90-99
+  {
+    id: 90,
     url: "https://images.squarespace-cdn.com/content/v1/5c7976ec11f78465c3ab8a2d/79c67f22-c5bf-4c1e-9c02-944536316f56/Madrid%2C+Spain-0267-April+23%2C+2018+Smart+Photo.jpg",
     alt: "Panorámica de Toledo - Ciudad de las Tres Culturas",
     category: "location"
