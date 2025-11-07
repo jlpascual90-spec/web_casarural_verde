@@ -40,7 +40,7 @@ export const propertyData = {
       capacity: 2
     },
     {
-      name: "GERMANICUS",
+      name: "SULLA",
       type: "Habitación Doble", 
       description: "Habitación doble equipada con dos camas individuales, dos mesillas, armario con espejo, escritorio, dos sillas y ventilador de techo.",
       capacity: 2
@@ -52,8 +52,8 @@ export const propertyData = {
       capacity: 2
     },
     {
-      name: "SULLA",
-      type: "Habitación Doble",
+      name: "GERMÁNICUS",
+      type: "Habitación Triple",
       description: "Habitación doble equipada con dos camas individuales y una cama supletoria, tres mesillas, armario con espejo, escritorio, tres sillas y ventilador de techo.",
       capacity: 2+1
     },
@@ -206,7 +206,7 @@ export const galleryImages = [
   {
     id: 20,
     url: "https://i.imgur.com/amrpnk1.jpeg",
-    alt: "GERMANICUS - Habitación triple inspidada en la serenidad de los campamentos romanos.",
+    alt: "GERMANICUS - Habitación doble, con cama supletoria, inspidada en la serenidad de los campamentos romanos.",
     category: "GERMANICUS"
   },
   // Interior baños - 3 fotos
