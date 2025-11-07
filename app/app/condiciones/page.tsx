@@ -19,7 +19,7 @@ export default function CondicionesPage() {
         </div>
 
         {/* Contenido literal */}
-        <article className="prose prose-neutral dark:prose-invert max-w-none">
+        <article className="prose prose-neutral dark:prose-invert max-w-none text-justify condiciones-content">
           <h2>RESERVA</h2>
           <p>
             La reserva se realizará a través de la página web o llamando al teléfono 687765315. Para hacerla efectiva,

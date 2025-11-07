@@ -109,7 +109,6 @@ export function Footer() {
             </ul>
             <div className="mt-4 text-xs text-muted-foreground">
               <p>Nº Registro: 45012120399</p>
-              <p>María Elena Felpeto Santero</p>
             </div>
           </div>
         </div>
