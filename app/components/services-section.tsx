@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Wifi, Car, Utensils, Wind, Droplets, Tv } from "lucide-react";
 
-export default function ServicesSection() {
+export function ServicesSection() {
   const services = [
     {
       icon: Wifi,
