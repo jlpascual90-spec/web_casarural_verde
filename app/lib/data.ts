@@ -150,13 +150,13 @@ export const galleryImages = [
   // CASTRUM - IDs 21-30
   {
     id: 21,
-    url: "https://i.imgur.com/4sYZ1vi.jpeg",
+    url: "/02_interiores/29 DUX CASTRUM.avif",
     alt: "CASTRUM - Salón-cocina de 65m2 con mesa de comedor grande",
     category: "CASTRUM"
   },
   {
     id: 22,
-    url: "https://i.imgur.com/Pl3hHDP.jpeg",
+    url: "/02_interiores/27 DUX CASTRUM.avif",
     alt: "CASTRUM - Espacio cálido para descansar y convivir",
     category: "CASTRUM"
   },
@@ -239,8 +239,20 @@ export const galleryImages = [
   // SULLA - IDs 51-55
   {
     id: 51,
-    url: "https://i.imgur.com/Nh2udIU.jpeg",
+    url: "/02_interiores/60 DUX SULLA.avif",
     alt: "SULLA - Habitación doble, refugio fresco y acogedor.",
+    category: "SULLA"
+  },
+  {
+    id: 52,
+    url: "/02_interiores/57 DUX SULLA.avif",
+    alt: "SULLA - Escritorio y luz ambiental.",
+    category: "SULLA"
+  },
+  {
+    id: 53,
+    url: "/02_interiores/59 DUX SULLA.avif",
+    alt: "SULLA - Habitación doble, detalles cuidados.",
     category: "SULLA"
   },
   
