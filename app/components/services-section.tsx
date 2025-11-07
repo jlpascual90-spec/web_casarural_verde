@@ -1,3 +1,57 @@
+ahora en el archivo:     app/components/services-section.tsx
+
+cambiar el apartado:
+  {/* DISTINTIVO 4 ESTRELLAS */}
+        <div className="mt-16">
+          <div className="bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-950/20 dark:to-yellow-950/20 rounded-xl p-8 shadow-elegant border-2 border-amber-200 dark:border-amber-800">
+            <div className="flex flex-col lg:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <div className="relative w-48 h-48 bg-white dark:bg-card rounded-lg p-4 shadow-lg">
+                  <Image
+                    src="/distintivo_4estrellas.png"
+                    alt="Distintivo 4 Estrellas Casas Rurales - DUX TOLEDO"
+                    fill
+                    className="object-contain p-2"
+                  />
+                </div>
+              </div>
+              
+              <div className="flex-1 text-center lg:text-left">
+                <div className="flex items-center justify-center lg:justify-start mb-4">
+                  <Award className="h-8 w-8 text-amber-600 mr-3" />
+                  <h3 className="text-2xl font-bold text-foreground">
+                    Calidad Certificada
+                  </h3>
+                </div>
+                
+                <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+                  DUX TOLEDO cuenta con el <strong className="text-amber-700 dark:text-amber-500">Distintivo de 4 Estrellas</strong> otorgado por la Junta de Comunidades de Castilla-La Mancha, que certifica la excelencia de nuestras instalaciones y servicios como casa rural.
+                </p>
+                
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                    <Star className="h-4 w-4 fill-current" />
+                    Máxima Categoría
+                  </span>
+                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium">
+                    Calidad Garantizada
+                  </span>
+                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium">
+                    Certificación Oficial
+                  </span>
+                </div>
+                
+                <p className="text-sm text-muted-foreground mt-4 italic">
+                  Este distintivo avala nuestro compromiso con la calidad, el confort y la satisfacción de nuestros huéspedes.
+                </p>
+              </div>
+
+por este texto:
+DUX by TOLEDO ESTA INSCRITA EN EL REGISTRO DE EMPRESAS Y ESTABLECIMIENTOS TURÍSTICOS DE CASTILLA LA MANCHA CON NÚMERO DE REGISTRO 45012120399 Y CATEGORIA DE 4 ESTRELLAS VERDES, QUE CERTIFICA LA EXCELENCIA DE NUESTRAS INSTALACIONES Y SERVICIOS COMO CASA RURAL 
+ 
+y "máxima categoría" por "Categoría Alta"
+
+código:
 "use client";
 
 import React from "react";
@@ -314,15 +368,15 @@ export function ServicesSection() {
           </div>
         </div>
 
-        {/* DISTINTIVO 4 ESTRELLAS */}
+        {/* DISTINTIVO 4 ESTRELLAS VERDES */}
         <div className="mt-16">
-          <div className="bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-950/20 dark:to-yellow-950/20 rounded-xl p-8 shadow-elegant border-2 border-amber-200 dark:border-amber-800">
+          <div className="bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950/20 dark:to-green-950/20 rounded-xl p-8 shadow-elegant border-2 border-emerald-200 dark:border-emerald-800">
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="flex-shrink-0">
                 <div className="relative w-48 h-48 bg-white dark:bg-card rounded-lg p-4 shadow-lg">
                   <Image
                     src="/distintivo_4estrellas.png"
-                    alt="Distintivo 4 Estrellas Casas Rurales - DUX TOLEDO"
+                    alt="Distintivo 4 Estrellas Verdes Casas Rurales - DUX TOLEDO"
                     fill
                     className="object-contain p-2"
                   />
@@ -331,25 +385,25 @@ export function ServicesSection() {
               
               <div className="flex-1 text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start mb-4">
-                  <Award className="h-8 w-8 text-amber-600 mr-3" />
+                  <Award className="h-8 w-8 text-emerald-600 mr-3" />
                   <h3 className="text-2xl font-bold text-foreground">
                     Calidad Certificada
                   </h3>
                 </div>
                 
                 <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                  DUX TOLEDO cuenta con el <strong className="text-amber-700 dark:text-amber-500">Distintivo de 4 Estrellas</strong> otorgado por la Junta de Comunidades de Castilla-La Mancha, que certifica la excelencia de nuestras instalaciones y servicios como casa rural.
+                  DUX by TOLEDO está inscrita en el Registro de Empresas y Establecimientos Turísticos de Castilla-La Mancha con <strong className="text-emerald-700 dark:text-emerald-500">número de registro 45012120399</strong> y categoría de <strong className="text-emerald-700 dark:text-emerald-500">4 Estrellas Verdes</strong>, que certifica la excelencia de nuestras instalaciones y servicios como casa rural.
                 </p>
                 
                 <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                  <span className="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
                     <Star className="h-4 w-4 fill-current" />
-                    Máxima Categoría
+                    Categoría Alta
                   </span>
-                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium">
+                  <span className="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 px-4 py-2 rounded-full text-sm font-medium">
                     Calidad Garantizada
                   </span>
-                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium">
+                  <span className="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 px-4 py-2 rounded-full text-sm font-medium">
                     Certificación Oficial
                   </span>
                 </div>
