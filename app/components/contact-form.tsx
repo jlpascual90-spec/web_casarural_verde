@@ -62,20 +62,7 @@ export function ContactForm() {
   };
 
   const generateWhatsAppUrl = () => {
-    const message = `¡Hola! Me interesa reservar DUX TOLEDO. 
-    
-Detalles de mi consulta:
-- Nombre: ${formData.nombre || 'No especificado'}
-- Email: ${formData.email || 'No especificado'}
-- Teléfono: ${formData.telefono || 'No especificado'}
-- Fecha entrada: ${formData.fechaEntrada || 'No especificada'}
-- Fecha salida: ${formData.fechaSalida || 'No especificada'}
-- Número de huéspedes: ${formData.huespedes || 'No especificado'}
-- Mensaje: ${formData.mensaje || 'Sin mensaje adicional'}
-
-¡Espero su respuesta!`;
-    
-    return `https://wa.me/${propertyData?.contact?.whatsapp?.replace('+', '')}?text=${encodeURIComponent(message)}`;
+    return "https://wa.me/34687765315?text=Hola,%20quiero%20información%20sobre%20DUX%20TOLEDO";
   };
 
   return (
@@ -285,9 +272,6 @@ Detalles de mi consulta:
 
             {/* Checkbox de Política de Privacidad */}
             <div className="p-4 bg-muted/30 rounded-lg border border-border">
-              <p className="text-sm text-muted-foreground mb-3">
-                Recuerde añadir un aviso legal como este en su formulario de registro:
-              </p>
               <div className="flex items-start space-x-3">
                 <input
                   type="checkbox"
