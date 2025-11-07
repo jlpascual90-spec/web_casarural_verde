@@ -45,6 +45,14 @@ function RoomCard({ room, index }: { room: any; index: number }) {
     }
   }, [roomImages.length]);
 
+  // Determinar el texto de camas según la habitación
+  const getBedText = () => {
+    if (room.name === "GERMANICUS") {
+      return "Camas individuales + supletoria";
+    }
+    return "Camas individuales";
+  };
+
   return (
     <div
       className="group animate-fade-in"
@@ -127,7 +135,7 @@ function RoomCard({ room, index }: { room: any; index: number }) {
           <div className="flex items-center space-x-4 text-xs text-muted-foreground">
             <div className="flex items-center space-x-1">
               <Bed className="h-3 w-3" />
-              <span>Camas individuales</span>
+              <span>{getBedText()}</span>
             </div>
             <div className="flex items-center space-x-1">
               <Wind className="h-3 w-3" />

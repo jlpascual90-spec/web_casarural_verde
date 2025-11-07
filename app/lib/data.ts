@@ -39,7 +39,7 @@ export const propertyData = {
       capacity: 2
     },
     {
-      name: "GERMANICUS",
+      name: "SULLA",
       type: "Habitación Doble", 
       description: "Habitación doble equipada con dos camas individuales, dos mesillas, armario con espejo, escritorio, dos sillas y ventilador de techo.",
       capacity: 2
@@ -51,10 +51,10 @@ export const propertyData = {
       capacity: 2
     },
     {
-      name: "SULLA",
-      type: "Habitación Doble",
+      name: "GERMÁNICUS",
+      type: "Habitación Triple",
       description: "Habitación doble equipada con dos camas individuales y una cama supletoria, tres mesillas, armario con espejo, escritorio, tres sillas y ventilador de techo.",
-      capacity: 2
+      capacity: 2+1
     },
     {
       name: "JULIUS CAESAR",
@@ -248,7 +248,7 @@ export const galleryImages = [
   {
     id: 56,
     url: "https://i.imgur.com/amrpnk1.jpeg",
-    alt: "GERMANICUS - Habitación triple inspirada en la serenidad de los campamentos romanos.",
+    alt: "GERMANICUS - Habitación triple, con cama supletoria, inspirada en la serenidad de los campamentos romanos.",
     category: "GERMANICUS"
   },
   

@@ -61,7 +61,7 @@ export function HeroSection() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 animate-slide-in-left">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
               <Users className="h-8 w-8 mx-auto mb-2" />
-              <p className="font-semibold">Hasta 12 personas</p>
+              <p className="font-semibold">Hasta 13 personas</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
               <Bed className="h-8 w-8 mx-auto mb-2" />

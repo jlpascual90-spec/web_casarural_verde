@@ -21,13 +21,13 @@ export default function BienvenidaPage() {
         {/* Contenido */}
         <article className="prose prose-neutral dark:prose-invert max-w-none prose-lg">
           <p className="text-lg leading-relaxed">
-            ¡Aproximaos, aproximaos a la ventana de DUX TOLEDO…! ¡Con los ojos cerrados, sí… si no os incomoda! ¡Ahora, abridlos…, por favor! Imaginad que contempláis lo mismo que San Isidoro de Sevilla llegando para el concilio; puede que prefiráis componer la mirada de Alfonso VI al inicio del asedio para reconquistarla o la de María Pacheco con las lágrimas de la derrota de los comuneros; quizás, si amáis la poesía, soñéis con ser Garcilaso que describe la magia del Tajo; si sois ingeniero, Juanelo Turriano que lo domina… Incluso podríais mirar a través de los ojos de Einstein y también escribir en vuestro diario: "Toledo es como un cuento de hadas".
+            ¡Aproximaos, aproximaos a la ventana de DUX TOLEDO…! ¡Con los ojos cerrados, sí… si no os incomoda! ¡Ahora, abridlos…, por favor! Imaginad que contempláis lo mismo que San Isidoro de Sevilla llegando para el concilio; puede que prefiráis componer la mirada de Alfonso VI al inicio del asedio para reconquistarla o la de María Pacheco con las lágrimas de la derrota de los comuneros; quizás, si amáis la poesía, soñéis con ser Garcilaso que describe la magia del Tajo; si sois ingeniero, Juanelo Turriano que lo domina… Incluso podríais mirar a través de los ojos de Einstein y también escribir en vuestro diario: <strong>&quot;Toledo es como un cuento de hadas&quot;</strong>.
           </p>
           <p className="text-lg leading-relaxed mt-6">
             Permítannos, desde la hospitalidad de nuestra casa, ayudarles a disfrutar de esta maravillosa ciudad.
           </p>
           <p className="text-right text-muted-foreground italic mt-8">
-            Fco. Javier Rabalo Casillas.
+            Fco. Javier Rabalo Casillas
           </p>
         </article>
       </div>
