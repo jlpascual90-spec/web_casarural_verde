@@ -61,7 +61,7 @@ export function ServicesSection() {
                 Categoría Alta
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                DUX by TOLEDO está inscrita en el Registro de Empresas y Establecimientos Turísticos de Castilla-La Mancha con número de registro <strong>45012120399</strong> y categoría de <strong className="text-amber-700 dark:text-amber-500">4 Estrellas Verdes</strong>, que certifica la excelencia de nuestras instalaciones y servicios como casa rural.
+                DUX by TOLEDO está inscrita en el Registro de Empresas y Establecimientos Turísticos de Castilla-La Mancha con número de registro <strong>45012120399</strong> y categoría de <strong>4 Estrellas Verdes</strong>, que certifica la excelencia de nuestras instalaciones y servicios como casa rural.
               </p>
             </div>
           </div>
