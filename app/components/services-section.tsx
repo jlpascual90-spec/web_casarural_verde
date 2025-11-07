@@ -1,419 +1,84 @@
-ahora en el archivo:     app/components/services-section.tsx
-
-cambiar el apartado:
-  {/* DISTINTIVO 4 ESTRELLAS */}
-        <div className="mt-16">
-          <div className="bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-950/20 dark:to-yellow-950/20 rounded-xl p-8 shadow-elegant border-2 border-amber-200 dark:border-amber-800">
-            <div className="flex flex-col lg:flex-row items-center gap-8">
-              <div className="flex-shrink-0">
-                <div className="relative w-48 h-48 bg-white dark:bg-card rounded-lg p-4 shadow-lg">
-                  <Image
-                    src="/distintivo_4estrellas.png"
-                    alt="Distintivo 4 Estrellas Casas Rurales - DUX TOLEDO"
-                    fill
-                    className="object-contain p-2"
-                  />
-                </div>
-              </div>
-              
-              <div className="flex-1 text-center lg:text-left">
-                <div className="flex items-center justify-center lg:justify-start mb-4">
-                  <Award className="h-8 w-8 text-amber-600 mr-3" />
-                  <h3 className="text-2xl font-bold text-foreground">
-                    Calidad Certificada
-                  </h3>
-                </div>
-                
-                <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                  DUX TOLEDO cuenta con el <strong className="text-amber-700 dark:text-amber-500">Distintivo de 4 Estrellas</strong> otorgado por la Junta de Comunidades de Castilla-La Mancha, que certifica la excelencia de nuestras instalaciones y servicios como casa rural.
-                </p>
-                
-                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
-                    <Star className="h-4 w-4 fill-current" />
-                    Máxima Categoría
-                  </span>
-                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium">
-                    Calidad Garantizada
-                  </span>
-                  <span className="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium">
-                    Certificación Oficial
-                  </span>
-                </div>
-                
-                <p className="text-sm text-muted-foreground mt-4 italic">
-                  Este distintivo avala nuestro compromiso con la calidad, el confort y la satisfacción de nuestros huéspedes.
-                </p>
-              </div>
-
-por este texto:
-DUX by TOLEDO ESTA INSCRITA EN EL REGISTRO DE EMPRESAS Y ESTABLECIMIENTOS TURÍSTICOS DE CASTILLA LA MANCHA CON NÚMERO DE REGISTRO 45012120399 Y CATEGORIA DE 4 ESTRELLAS VERDES, QUE CERTIFICA LA EXCELENCIA DE NUESTRAS INSTALACIONES Y SERVICIOS COMO CASA RURAL 
- 
-y "máxima categoría" por "Categoría Alta"
-
-código:
 "use client";
 
-import React from "react";
 import Image from "next/image";
-import { 
-  Thermometer, 
-  Shield, 
-  MapPin, 
-  Train, 
-  Bus, 
-  Phone, 
-  Clock, 
-  Star,
-  Mountain,
-  Camera,
-  Castle,
-  Award,
-  Landmark,
-  TreePine,
-  Wind
-} from "lucide-react";
+import { Wifi, Car, Utensils, Wind, Droplets, Tv } from "lucide-react";
 
-export function ServicesSection() {
+export default function ServicesSection() {
+  const services = [
+    {
+      icon: Wifi,
+      title: "WiFi Gratis",
+      description: "Conexión de alta velocidad en todas las áreas"
+    },
+    {
+      icon: Car,
+      title: "Parking Privado",
+      description: "Aparcamiento gratuito para nuestros huéspedes"
+    },
+    {
+      icon: Utensils,
+      title: "Cocina Equipada",
+      description: "Cocina completa con todos los utensilios"
+    },
+    {
+      icon: Wind,
+      title: "Aire Acondicionado",
+      description: "Climatización en todas las habitaciones"
+    },
+    {
+      icon: Droplets,
+      title: "Calefacción",
+      description: "Sistema de calefacción central"
+    },
+    {
+      icon: Tv,
+      title: "TV y Entretenimiento",
+      description: "Smart TV con canales internacionales"
+    }
+  ];
+
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            INSTALACIONES Y SERVICIOS
+    <section className="py-20 bg-muted/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* DISTINTIVO 4 ESTRELLAS */}
+        <div className="flex justify-center mb-12">
+          <Image
+            src="/distintivo_4estrellas.png"
+            alt="Distintivo 4 Estrellas - Casas Rurales Castilla-La Mancha"
+            width={300}
+            height={200}
+            className="object-contain"
+            priority
+          />
+        </div>
+
+        {/* Título de la sección */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            Servicios y Comodidades
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Todo lo que necesitas para una estancia perfecta en DUX TOLEDO
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Todo lo que necesitas para una estancia perfecta en el corazón de Toledo
           </p>
         </div>
 
-        {/* INSTALACIONES DE CALIDAD */}
-        <div className="mb-16">
-          <div className="bg-card rounded-xl p-8 shadow-elegant border border-border/20">
-            <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center">
-              <Star className="h-6 w-6 text-primary mr-3" />
-              INSTALACIONES DE CALIDAD
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              La casa se ubica en un entorno muy tranquilo, el tipo de construcción como vivienda unifamiliar con materiales de primera calidad, el sistema de climatización es de aerotermia proporcionando una temperatura adecuada tanto en los meses de frío como en los de calor. Los servicios de que dispone tanto en el interior como en el exterior de la vivienda, la cercanía a zonas comerciales y de servicios de salud, así como el que pueda disponer de una cocina equipada como si estuviera en su propia casa, hacen de DUX TOLEDO el lugar ideal para poder disfrutar unos días culturales o de descanso en el entorno de la ciudad de las tres culturas y patrimonio de la humanidad que Vd. estaba deseando conocer.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-muted/50 rounded-lg">
-                <Thermometer className="h-10 w-10 mx-auto mb-4 text-primary" />
-                <h4 className="font-bold text-lg mb-2">Sistema Aerotermia</h4>
-                <p className="text-sm text-muted-foreground">Climatización eficiente todo el año</p>
-              </div>
-              <div className="text-center p-6 bg-muted/50 rounded-lg">
-                <Shield className="h-10 w-10 mx-auto mb-4 text-primary" />
-                <h4 className="font-bold text-lg mb-2">Materiales Premium</h4>
-                <p className="text-sm text-muted-foreground">Construcción de primera calidad</p>
-              </div>
-              <div className="text-center p-6 bg-muted/50 rounded-lg">
-                <MapPin className="h-10 w-10 mx-auto mb-4 text-primary" />
-                <h4 className="font-bold text-lg mb-2">Entorno Tranquilo</h4>
-                <p className="text-sm text-muted-foreground">Vivienda unifamiliar aislada</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* BIEN UBICADA */}
-        <div className="mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-slide-in-left">
-              <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center">
-                <MapPin className="h-6 w-6 text-primary mr-3" />
-                BIEN UBICADA
-              </h3>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                La casa está situada en una zona tranquila con acceso directo a la ciudad de Toledo a doce minutos del centro histórico y de cualquiera de los aparcamientos públicos situados en las dos escaleras mecánicas que le permiten acceder cómodamente a la plaza de Zocodover o a San Juan de los Reyes. Con igual o mayor facilidad incluso de acceso que desde cualquier punto de la propia ciudad.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-sm">
-                  <Clock className="h-4 w-4 text-primary" />
-                  <span><strong>12 minutos</strong> al centro histórico de Toledo</span>
+        {/* Grid de servicios */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center p-6 rounded-lg bg-card hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Icon className="w-8 h-8 text-primary" />
                 </div>
-                <div className="flex items-center space-x-3 text-sm">
-                  <MapPin className="h-4 w-4 text-primary" />
-                  <span>Acceso directo a <strong>Plaza Zocodover</strong></span>
-                </div>
-                <div className="flex items-center space-x-3 text-sm">
-                  <Castle className="h-4 w-4 text-primary" />
-                  <span>Cerca de <strong>San Juan de los Reyes</strong></span>
-                </div>
+                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                <p className="text-muted-foreground">{service.description}</p>
               </div>
-            </div>
-            <div className="animate-slide-in-right">
-              <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
-                <h4 className="font-bold text-primary mb-4">Ubicación en Olías del Rey</h4>
-                <p className="text-sm text-muted-foreground mb-4">
-                  A solo 5 minutos de la A-42 Madrid-Toledo, con fácil acceso tanto a Toledo como a Madrid.
-                </p>
-                <div className="bg-white dark:bg-card rounded-lg p-4 border">
-                  <div className="grid grid-cols-2 gap-4 text-xs">
-                    <div>
-                      <span className="font-semibold">Madrid:</span>
-                      <p className="text-muted-foreground">45 min por A-42</p>
-                    </div>
-                    <div>
-                      <span className="font-semibold">Toledo Centro:</span>
-                      <p className="text-muted-foreground">12 min en coche</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* TRANSPORTE Y COMUNICACIONES */}
-        <div className="mb-16">
-          <div className="bg-card rounded-xl p-8 shadow-elegant border border-border/20">
-            <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center">
-              <Bus className="h-6 w-6 text-primary mr-3" />
-              TRANSPORTE Y COMUNICACIONES
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              <div className="text-center p-4 bg-muted/50 rounded-lg">
-                <div className="h-12 w-12 mx-auto mb-3 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
-                  <div className="text-2xl">🚗</div>
-                </div>
-                <h4 className="font-semibold mb-1">A-42</h4>
-                <p className="text-xs text-muted-foreground">2 min a la salida Madrid-Toledo</p>
-              </div>
-              
-              <div className="text-center p-4 bg-muted/50 rounded-lg">
-                <Bus className="h-8 w-8 mx-auto mb-3 text-green-600" />
-                <h4 className="font-semibold mb-1">Autobús</h4>
-                <p className="text-xs text-muted-foreground">Toledo ↔ Olías del Rey</p>
-              </div>
-              
-              <div className="text-center p-4 bg-muted/50 rounded-lg">
-                <Phone className="h-8 w-8 mx-auto mb-3 text-yellow-600" />
-                <h4 className="font-semibold mb-1">Taxi</h4>
-                <p className="text-xs text-muted-foreground">925 67 30 67</p>
-              </div>
-              
-              <div className="text-center p-4 bg-muted/50 rounded-lg">
-                <Train className="h-8 w-8 mx-auto mb-3 text-red-600" />
-                <h4 className="font-semibold mb-1">AVE</h4>
-                <p className="text-xs text-muted-foreground">Toledo - Madrid</p>
-              </div>
-            </div>
-
-            <div className="bg-muted/30 rounded-lg p-6">
-              <h4 className="font-semibold mb-3">Servicios Cercanos</h4>
-              <p className="text-sm text-muted-foreground mb-4">
-                Junto al centro comercial Puerta de Toledo, donde puede realizar sus compras en Froiz y divertirse en sus salas de cine o bolera.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs">Supermercado Froiz</span>
-                <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs">Cines</span>
-                <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs">Bolera</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* ALREDEDORES */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-foreground mb-8 text-center flex items-center justify-center">
-            <Mountain className="h-6 w-6 text-primary mr-3" />
-            ALREDEDORES - LUGARES DE INTERÉS
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Toledo Centro */}
-            <div className="bg-card rounded-lg p-6 shadow-elegant border border-border/20 hover:shadow-elegant-lg transition-all duration-300">
-              <div className="flex items-center mb-3">
-                <Castle className="h-8 w-8 text-amber-600 mr-3" />
-                <div>
-                  <h4 className="font-semibold">Toledo Histórico</h4>
-                  <p className="text-xs text-muted-foreground">12 minutos</p>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Ciudad de las Tres Culturas, Patrimonio UNESCO. Catedral Primada, Alcázar, Sinagoga del Tránsito, Mezquita del Cristo de la Luz.
-              </p>
-            </div>
-
-            {/* Puy du Fou */}
-            <div className="bg-card rounded-lg p-6 shadow-elegant border border-border/20 hover:shadow-elegant-lg transition-all duration-300">
-              <div className="flex items-center mb-3">
-                <div className="h-10 w-10 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mr-3">
-                  <div className="text-lg">🎭</div>
-                </div>
-                <div>
-                  <h4 className="font-semibold">Puy du Fou España</h4>
-                  <p className="text-xs text-muted-foreground">20 minutos</p>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Parque temático histórico reconocido mundialmente. Un viaje en el tiempo donde la Historia de España cobra vida.
-              </p>
-            </div>
-
-            {/* Molinos de Consuegra */}
-            <div className="bg-card rounded-lg p-6 shadow-elegant border border-border/20 hover:shadow-elegant-lg transition-all duration-300">
-              <div className="flex items-center mb-3">
-                <Wind className="h-8 w-8 text-blue-600 mr-3" />
-                <div>
-                  <h4 className="font-semibold">Molinos de Consuegra</h4>
-                  <p className="text-xs text-muted-foreground">45 minutos</p>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Icónicos molinos de viento manchegos. Ruta del Quijote con vistas espectaculares y castillo medieval.
-              </p>
-            </div>
-
-            {/* Aranjuez */}
-            <div className="bg-card rounded-lg p-6 shadow-elegant border border-border/20 hover:shadow-elegant-lg transition-all duration-300">
-              <div className="flex items-center mb-3">
-                <Landmark className="h-8 w-8 text-green-600 mr-3" />
-                <div>
-                  <h4 className="font-semibold">Palacio de Aranjuez</h4>
-                  <p className="text-xs text-muted-foreground">45 minutos</p>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Patrimonio UNESCO. Palacio Real, jardines históricos y paisaje cultural declarado Patrimonio de la Humanidad.
-              </p>
-            </div>
-
-            {/* Parque Nacional Cabañeros */}
-            <div className="bg-card rounded-lg p-6 shadow-elegant border border-border/20 hover:shadow-elegant-lg transition-all duration-300">
-              <div className="flex items-center mb-3">
-                <TreePine className="h-8 w-8 text-emerald-600 mr-3" />
-                <div>
-                  <h4 className="font-semibold">P.N. Cabañeros</h4>
-                  <p className="text-xs text-muted-foreground">1h 15min</p>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Safari ibérico. Observación de fauna salvaje: ciervos, jabalíes, águilas imperiales en su hábitat natural.
-              </p>
-            </div>
-
-            {/* Carranque */}
-            <div className="bg-card rounded-lg p-6 shadow-elegant border border-border/20 hover:shadow-elegant-lg transition-all duration-300">
-              <div className="flex items-center mb-3">
-                <Camera className="h-8 w-8 text-purple-600 mr-3" />
-                <div>
-                  <h4 className="font-semibold">Parque Arq. Carranque</h4>
-                  <p className="text-xs text-muted-foreground">30 minutos</p>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Villas romanas del siglo IV con mosaicos excepcionales. Uno de los yacimientos romanos más importantes de España.
-              </p>
-            </div>
-          </div>
-
-          {/* Lista completa de lugares */}
-          <div className="mt-8 bg-muted/30 rounded-lg p-6">
-            <h4 className="font-semibold mb-4">Más Lugares de Interés Cercanos</h4>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 text-sm">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Campo de Criptana</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Los Grecos de Illescas</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Castillo de Guadamur</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Barrancas de Burujón</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Castillo de Belmonte</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>El Toboso</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Tembleque</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Chinchón</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Ocaña</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Castillo de Oropesa</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Talavera de la Reina</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Montes de Toledo</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* DISTINTIVO 4 ESTRELLAS VERDES */}
-        <div className="mt-16">
-          <div className="bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950/20 dark:to-green-950/20 rounded-xl p-8 shadow-elegant border-2 border-emerald-200 dark:border-emerald-800">
-            <div className="flex flex-col lg:flex-row items-center gap-8">
-              <div className="flex-shrink-0">
-                <div className="relative w-48 h-48 bg-white dark:bg-card rounded-lg p-4 shadow-lg">
-                  <Image
-                    src="/distintivo_4estrellas.png"
-                    alt="Distintivo 4 Estrellas Verdes Casas Rurales - DUX TOLEDO"
-                    fill
-                    className="object-contain p-2"
-                  />
-                </div>
-              </div>
-              
-              <div className="flex-1 text-center lg:text-left">
-                <div className="flex items-center justify-center lg:justify-start mb-4">
-                  <Award className="h-8 w-8 text-emerald-600 mr-3" />
-                  <h3 className="text-2xl font-bold text-foreground">
-                    Calidad Certificada
-                  </h3>
-                </div>
-                
-                <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                  DUX by TOLEDO está inscrita en el Registro de Empresas y Establecimientos Turísticos de Castilla-La Mancha con <strong className="text-emerald-700 dark:text-emerald-500">número de registro 45012120399</strong> y categoría de <strong className="text-emerald-700 dark:text-emerald-500">4 Estrellas Verdes</strong>, que certifica la excelencia de nuestras instalaciones y servicios como casa rural.
-                </p>
-                
-                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                  <span className="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
-                    <Star className="h-4 w-4 fill-current" />
-                    Categoría Alta
-                  </span>
-                  <span className="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 px-4 py-2 rounded-full text-sm font-medium">
-                    Calidad Garantizada
-                  </span>
-                  <span className="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 px-4 py-2 rounded-full text-sm font-medium">
-                    Certificación Oficial
-                  </span>
-                </div>
-                
-                <p className="text-sm text-muted-foreground mt-4 italic">
-                  Este distintivo avala nuestro compromiso con la calidad, el confort y la satisfacción de nuestros huéspedes.
-                </p>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
