@@ -19,18 +19,7 @@ export default function CondicionesPage() {
         </div>
 
         {/* Contenido literal */}
-        <article className="prose prose-neutral dark:prose-invert max-w-none text-justify">
-          <style jsx>{`
-            article h2 {
-              color: hsl(var(--primary));
-              font-weight: 700;
-              font-size: 1.5rem;
-              margin-top: 2rem;
-              margin-bottom: 1rem;
-              border-bottom: 2px solid hsl(var(--primary));
-              padding-bottom: 0.5rem;
-            }
-          `}</style>
+        <article className="prose prose-neutral dark:prose-invert max-w-none text-justify condiciones-content">
           <h2>RESERVA</h2>
           <p>
             La reserva se realizará a través de la página web o llamando al teléfono 687765315. Para hacerla efectiva,
