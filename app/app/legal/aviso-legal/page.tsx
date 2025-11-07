@@ -1,4 +1,3 @@
-
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
@@ -24,86 +23,77 @@ export default function AvisoLegalPage() {
           
           <div className="bg-card rounded-lg p-8 shadow-sm space-y-6">
             <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">1. Datos Identificativos</h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <h2 className="text-xl font-semibold mb-4 text-primary">Datos Identificativos</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, 
-                de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, 
-                a continuación se reflejan los siguientes datos:
+                de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), 
+                el propietario de la web https://duxtoledo.com, le informa de lo siguiente:
               </p>
               <div className="mt-4 bg-accent/20 p-4 rounded-lg">
                 <ul className="space-y-2 text-card-foreground">
-                  <li><strong>Titular:</strong> María Elena Felpeto Santero</li>
+                  <li><strong>Denominación social:</strong> María Elena Felpeto Santero</li>
                   <li><strong>NIF:</strong> 03875034V</li>
-                  <li><strong>Domicilio:</strong> Bargas, Toledo</li>
+                  <li><strong>Domicilio:</strong> C/ San Cipriano, 1 Bajo E, 45593 - Bargas (Toledo)</li>
                   <li><strong>Email:</strong> casarural@duxtoledo.com</li>
                   <li><strong>Teléfono:</strong> +34 687 765 315</li>
-                  <li><strong>Número de Inscripción:</strong> 45012120175 DUX TOLEDO</li>
+                  <li><strong>Autorización administrativa:</strong> Número de inscripción: 45012120175</li>
                 </ul>
               </div>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">2. Objeto</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Este sitio web tiene por objeto facilitar al público el conocimiento de las actividades 
-                que esta organización realiza y de los servicios que presta, en particular el servicio 
-                de alojamiento de turismo rural.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">3. Condiciones de Uso</h2>
+              <h2 className="text-xl font-semibold mb-4 text-primary">Responsabilidad sobre los Contenidos</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                El acceso y uso de este sitio web se somete a las presentes "Condiciones Generales de Uso". 
-                La utilización del sitio web implica la aceptación plena y sin reservas de todas y cada una 
-                de las disposiciones incluidas en este Aviso Legal.
+                Con los límites establecidos en la ley, https://duxtoledo.com no asume ninguna responsabilidad 
+                derivada de la falta de veracidad, integridad, actualización y precisión de los datos o 
+                informaciones que se contienen en sus páginas de Internet.
               </p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>El acceso a este sitio web es responsabilidad exclusiva de los usuarios.</li>
-                <li>El simple acceso a este sitio web no supone entablar una relación comercial.</li>
-                <li>El usuario se compromete a utilizar el sitio web de conformidad con la ley.</li>
-                <li>El usuario se compromete a no utilizar el sitio web para actividades contrarias a la ley, la moral y las buenas costumbres.</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">4. Responsabilidad</h2>
               <p className="text-muted-foreground leading-relaxed">
-                DUX TOLEDO no se hace responsable de los daños y perjuicios de toda naturaleza que 
-                pudieran traer causa de la disponibilidad y continuidad técnica del funcionamiento 
-                del sitio web y/o de sus servicios; de la defraudación de la utilidad que los usuarios 
-                hubieren podido atribuir al sitio web y/o a sus servicios; de la falibilidad del sitio 
-                web y/o sus servicios; en particular, aunque no de modo exclusivo, de los fallos en 
-                el acceso a las distintas páginas web o en su funcionamiento.
+                Los contenidos e información no vinculan a https://duxtoledo.com ni constituyen opiniones, 
+                consejos o asesoramiento legal de ningún tipo pues se trata meramente de un servicio ofrecido 
+                con carácter informativo y divulgativo.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">5. Propiedad Intelectual</h2>
+              <h2 className="text-xl font-semibold mb-4 text-primary">Enlaces a Terceros</h2>
               <p className="text-muted-foreground leading-relaxed">
-                DUX TOLEDO es titular de los derechos de propiedad intelectual e industrial de su página 
-                web, así como de los elementos contenidos en la misma (a título enunciativo, imágenes, 
-                sonido, audio, vídeo, software o textos; marcas o logotipos, combinaciones de colores, 
-                estructura y diseño, selección de materiales usados, programas de ordenador necesarios 
-                para su funcionamiento, acceso y uso, etc.), titularidad de DUX TOLEDO o bien de sus licenciantes.
+                Las páginas de Internet de https://duxtoledo.com pueden contener enlaces (links) a otras 
+                páginas de terceras partes que https://duxtoledo.com no puede controlar. Por lo tanto, 
+                https://duxtoledo.com no puede asumir responsabilidades por el contenido que pueda aparecer 
+                en páginas de terceros.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">6. Modificación del Presente Aviso Legal</h2>
+              <h2 className="text-xl font-semibold mb-4 text-primary">Propiedad Intelectual e Industrial</h2>
               <p className="text-muted-foreground leading-relaxed">
-                DUX TOLEDO se reserva el derecho de efectuar sin previo aviso las modificaciones que 
-                considere oportunas en su portal, pudiendo cambiar, suprimir o añadir tanto los contenidos 
-                y servicios que se presten a través de la misma como la forma en la que éstos aparezcan 
-                presentados o localizados en su portal.
+                Los textos, imágenes, sonidos, animaciones, software y el resto de contenidos incluidos en 
+                este website son propiedad exclusiva de https://duxtoledo.com o sus licenciantes. Cualquier 
+                acto de transmisión, distribución, cesión, reproducción, almacenamiento o comunicación pública 
+                total o parcial, debe contar con el consentimiento expreso de https://duxtoledo.com.
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-4 text-primary">7. Legislación Aplicable</h2>
+              <h2 className="text-xl font-semibold mb-4 text-primary">Protección de Datos Personales</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Asimismo, para acceder a algunos de los servicios que https://duxtoledo.com ofrece a través 
+                del website deberá proporcionar algunos datos de carácter personal. En cumplimiento de lo 
+                establecido en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de 
+                abril de 2016, relativo a la protección de las personas físicas en lo que respecta al 
+                tratamiento de datos personales y a la libre circulación de estos datos le informamos que, 
+                mediante la cumplimentación de los presentes formularios, sus datos personales quedarán 
+                incorporados y serán tratados en los ficheros de María Elena Felpeto Santero con el fin de 
+                poderle prestar y ofrecer nuestros servicios así como para informarle de las mejoras del sitio Web.
+              </p>
               <p className="text-muted-foreground leading-relaxed">
-                La relación entre DUX TOLEDO y el Usuario se regirá por la normativa española vigente 
-                y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Toledo.
+                Asimismo, le informamos de la posibilidad de que ejerza los derechos de acceso, rectificación, 
+                cancelación y oposición de sus datos de carácter personal, de manera gratuita mediante email a{" "}
+                <a href="mailto:casarural@duxtoledo.com" className="text-primary hover:underline">
+                  casarural@duxtoledo.com
+                </a>{" "}
+                o en la dirección C/ San Cipriano, 1 Bajo E, 45593 - Bargas (Toledo).
               </p>
             </section>
 
