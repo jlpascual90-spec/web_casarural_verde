@@ -150,13 +150,13 @@ export const galleryImages = [
   // CASTRUM - IDs 21-30
   {
     id: 21,
-    url: "https://i.imgur.com/4sYZ1vi.jpeg",
+    url: "/02_interiores/29 DUX CASTRUM.avif",
     alt: "CASTRUM - Salón-cocina de 65m2 con mesa de comedor grande",
     category: "CASTRUM"
   },
   {
     id: 22,
-    url: "https://i.imgur.com/Pl3hHDP.jpeg",
+    url: "/02_interiores/27 DUX CASTRUM.avif",
     alt: "CASTRUM - Espacio cálido para descansar y convivir",
     category: "CASTRUM"
   },
