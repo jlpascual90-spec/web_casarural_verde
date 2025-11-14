@@ -52,7 +52,7 @@ export const propertyData = {
     },
     {
       name: "GERMÁNICUS",
-      type: "Habitación Triple",
+      type: "Habitación Doble + supletoria",
       description: "Habitación doble equipada con dos camas individuales y una cama supletoria, tres mesillas, armario con espejo, escritorio, tres sillas y ventilador de techo.",
       capacity: 2+1
     },
