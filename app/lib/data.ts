@@ -52,7 +52,7 @@ export const propertyData = {
     },
     {
       name: "GERMÁNICUS",
-      type: "Habitación Triple",
+      type: "Habitación Doble con supletoria",
       description: "Habitación doble equipada con dos camas individuales y una cama supletoria, tres mesillas, armario con espejo, escritorio, tres sillas y ventilador de techo.",
       capacity: 2+1
     },
@@ -259,8 +259,8 @@ export const galleryImages = [
   // GERMANICUS - IDs 56-60
   {
     id: 56,
-    url: "https://i.imgur.com/amrpnk1.jpeg",
-    alt: "GERMANICUS - Habitación triple, con cama supletoria, inspirada en la serenidad de los campamentos romanos.",
+    url: "/02_interiores/GERMANICUS.jpeg",
+    alt: "GERMANICUS - Habitación Doble con cama supletoria, inspirada en la serenidad de los campamentos romanos.",
     category: "GERMANICUS"
   },
   
