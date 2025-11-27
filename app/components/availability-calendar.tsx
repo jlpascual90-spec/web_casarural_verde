@@ -88,28 +88,30 @@ export function AvailabilityCalendar() {
   };
 
   return (
-    <div className="border rounded-2xl bg-background/80 p-4 shadow-sm">
+    <div className="border rounded-2xl bg-background/80 p-4 shadow-sm max-w-md mx-auto">
+      {/* Cabecera mes/año + navegación */}
       <div className="flex items-center justify-between mb-4">
         <button
           type="button"
           onClick={handlePrevMonth}
-          className="px-2 py-1 text-sm border rounded"
+          className="px-2 py-1 text-xs border rounded-md hover:bg-muted"
         >
           ←
         </button>
-        <div className="font-semibold">
+        <div className="font-semibold text-sm">
           {monthNames[currentMonth]} {currentYear}
         </div>
         <button
           type="button"
           onClick={handleNextMonth}
-          className="px-2 py-1 text-sm border rounded"
+          className="px-2 py-1 text-xs border rounded-md hover:bg-muted"
         >
           →
         </button>
       </div>
 
-      <div className="grid grid-cols-7 text-xs text-center mb-2">
+      {/* Cabecera días de la semana */}
+      <div className="grid grid-cols-7 text-[0.7rem] text-center mb-2">
         {weekDays.map((d) => (
           <div key={d} className="font-semibold text-muted-foreground">
             {d}
@@ -117,7 +119,9 @@ export function AvailabilityCalendar() {
         ))}
       </div>
 
-      <div className="grid grid-cols-7 gap-1 text-sm">
+      {/* Días del mes */}
+      <div className="grid grid-cols-7 gap-1 text-[0.65rem]">
+        {/* Huecos antes del día 1 */}
         {Array.from({ length: offset }).map((_, i) => (
           <div key={`empty-${i}`} />
         ))}
@@ -127,18 +131,30 @@ export function AvailabilityCalendar() {
           const isToday =
             date.toDateString() === new Date().toDateString();
 
+          const baseClasses =
+            "flex flex-col items-center justify-center rounded-md border leading-tight py-1 px-0.5 min-h-[38px]";
+          const statusClasses =
+            status === "occupied"
+              ? "bg-red-500 text-white border-red-600"
+              : "bg-emerald-50 text-emerald-700 border-emerald-300";
+          const todayClasses = isToday ? "ring-2 ring-primary ring-offset-[1px]" : "";
+
           return (
             <div
               key={date.toISOString()}
-              className={[
-                "aspect-square flex items-center justify-center rounded-md border text-xs",
-                status === "occupied"
-                  ? "bg-red-500/80 text-white border-red-600"
-                  : "bg-emerald-500/10 text-emerald-800 border-emerald-300",
-                isToday ? "ring-2 ring-primary" : "",
-              ].join(" ")}
+              className={[baseClasses, statusClasses, todayClasses].join(" ")}
             >
-              {date.getDate()}
+              <span className="text-[0.7rem] font-semibold">
+                {date.getDate()}
+              </span>
+              <span
+                className={
+                  "mt-[1px] text-[0.6rem] font-medium " +
+                  (status === "occupied" ? "text-red-100" : "text-emerald-700")
+                }
+              >
+                {status === "occupied" ? "Ocupado" : "Libre"}
+              </span>
             </div>
           );
         })}
@@ -150,13 +166,13 @@ export function AvailabilityCalendar() {
         </p>
       )}
 
-      <div className="mt-3 flex justify-center gap-4 text-xs text-muted-foreground">
+      <div className="mt-3 flex justify-center gap-4 text-[0.65rem] text-muted-foreground">
         <div className="flex items-center gap-1">
-          <span className="w-3 h-3 rounded bg-emerald-500/40 border border-emerald-400" />
+          <span className="w-3 h-3 rounded bg-emerald-50 border border-emerald-300" />
           Libre
         </div>
         <div className="flex items-center gap-1">
-          <span className="w-3 h-3 rounded bg-red-500/80 border border-red-600" />
+          <span className="w-3 h-3 rounded bg-red-500 border border-red-600" />
           Ocupado
         </div>
       </div>

@@ -133,7 +133,6 @@ export function CookieConsent() {
                     <input
                       type="checkbox"
                       id="analytics-cookies"
-                      defaultChecked
                       className="mt-1"
                     />
                     <div className="flex-1">
@@ -151,7 +150,6 @@ export function CookieConsent() {
                     <input
                       type="checkbox"
                       id="marketing-cookies"
-                      defaultChecked
                       className="mt-1"
                     />
                     <div className="flex-1">
