@@ -27,6 +27,7 @@ export function ContactForm() {
     }));
   };
 
+  // 🔴 AQUÍ ES DONDE HEMOS CAMBIADO LA LÓGICA
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -36,13 +37,25 @@ export function ContactForm() {
     }
     
     setIsSubmitting(true);
+    setSubmitStatus('idle');
     
     try {
-      // Simulación de envío de formulario
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      console.log('📨 Enviando formulario de contacto...', formData);
       
-      // Aquí iría la lógica real de envío del formulario
-      // Por ahora simulamos un éxito
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error('Error al enviar el formulario');
+      }
+
+      console.log('✅ Formulario enviado correctamente');
+
       setSubmitStatus('success');
       setFormData({
         nombre: '',
@@ -55,6 +68,7 @@ export function ContactForm() {
       });
       setPrivacyAccepted(false);
     } catch (error) {
+      console.error('❌ Error al enviar el formulario:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -69,84 +83,161 @@ export function ContactForm() {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
       {/* Contact Information */}
       <div className="space-y-8 animate-slide-in-left">
-        <div>
-          <h2 className="text-3xl font-bold text-card-foreground mb-6">
-            ¡Contacta con Nosotros!
+        <div className="bg-card rounded-3xl p-8 shadow-soft border border-border">
+          <div className="inline-flex items-center rounded-full bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary mb-6">
+            <span className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse" />
+            Contacto
+          </div>
+
+          <h2 className="text-3xl font-bold text-card-foreground mb-4">
+            ¿Listo para tu estancia en DUX Toledo?
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Estamos aquí para ayudarte a planificar tu escapada perfecta a Toledo. 
-            Contáctanos para reservas, consultas o información adicional.
+          
+          <p className="text-muted-foreground mb-6">
+            Rellena el formulario y nos pondremos en contacto contigo lo antes posible para confirmar disponibilidad,
+            resolver tus dudas y ayudarte a planificar una experiencia inolvidable en nuestra casa rural.
           </p>
+
+          <div className="space-y-4">
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <Mail className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-card-foreground mb-1">Email</h3>
+                <a 
+                  href={`mailto:${propertyData?.contact?.email}`}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {propertyData?.contact?.email}
+                </a>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Respuesta normalmente en menos de 24 horas
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <Phone className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-card-foreground mb-1">Teléfono</h3>
+                <a 
+                  href={`tel:${propertyData?.contact?.phone}`}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {propertyData?.contact?.phone}
+                </a>
+                <p className="text-xs text-muted-foreground mt-1">
+                  También disponible por WhatsApp
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <MessageSquare className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-card-foreground mb-1">WhatsApp</h3>
+                <a 
+                  href={generateWhatsAppUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors"
+                >
+                  <MessageSquare className="h-4 w-4" />
+                  <span>Enviar mensaje directo</span>
+                </a>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Respuesta más rápida para consultas urgentes
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 pt-6 border-t border-border">
+            <div className="flex items-center space-x-3">
+              <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Check className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-card-foreground">
+                  Reserva directa sin comisiones
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Mejor precio garantizado reservando con nosotros.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="space-y-6">
-          <div className="flex items-start space-x-4">
-            <div className="flex-shrink-0 h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center">
-              <Phone className="h-6 w-6 text-primary" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-card-foreground mb-1">Teléfono</h3>
-              <a 
-                href={`tel:${propertyData?.contact?.phone}`}
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                {propertyData?.contact?.phone}
-              </a>
-            </div>
-          </div>
+        <div className="bg-muted/60 rounded-3xl p-6 border border-border">
+          <h3 className="text-lg font-semibold text-card-foreground mb-2">
+            Información importante
+          </h3>
+          <ul className="space-y-2 text-sm text-muted-foreground">
+  <li>
+    ✓ Estancia mínima de {(propertyData as any)?.minStay} noches.
+  </li>
+  <li>
+    ✓ Capacidad máxima de {(propertyData as any)?.maxGuests} personas.
+  </li>
+  <li>
+    ✓ Check-in de {(propertyData as any)?.checkIn} y check-out hasta {(propertyData as any)?.checkOut}.
+  </li>
+  <li>
+    ✓ Política de cancelación flexible (consúltanos para más detalles).
+  </li>
+</ul>
 
-          <div className="flex items-start space-x-4">
-            <div className="flex-shrink-0 h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center">
-              <Mail className="h-6 w-6 text-primary" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-card-foreground mb-1">Email</h3>
-              <a 
-                href={`mailto:${propertyData?.contact?.email}`}
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                {propertyData?.contact?.email}
-              </a>
-            </div>
-          </div>
-
-          <div className="flex items-start space-x-4">
-            <div className="flex-shrink-0 h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center">
-              <MessageSquare className="h-6 w-6 text-primary" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-card-foreground mb-1">WhatsApp</h3>
-              <a 
-                href={generateWhatsAppUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                {propertyData?.contact?.whatsapp}
-              </a>
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* Contact Form */}
+      {/* Formulario */}
       <div className="animate-slide-in-right">
-        <div className="bg-card rounded-lg shadow-elegant p-6">
-          <h3 className="text-2xl font-bold text-card-foreground mb-6">
-            Solicita Información
-          </h3>
+        <div className="bg-card rounded-3xl p-8 shadow-soft border border-border">
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h2 className="text-2xl font-bold text-card-foreground">
+                Enviar una consulta
+              </h2>
+              <p className="text-muted-foreground mt-1 text-sm">
+                Cuéntanos las fechas y el número de personas, y te responderemos con la mejor opción disponible.
+              </p>
+            </div>
+            <div className="hidden md:flex h-12 w-12 rounded-2xl bg-primary/10 items-center justify-center">
+              <Send className="h-6 w-6 text-primary" />
+            </div>
+          </div>
 
           {submitStatus === 'success' && (
-            <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center space-x-2 text-green-800 animate-fade-in">
-              <Check className="h-5 w-5" />
-              <span>¡Mensaje enviado correctamente! Te contactaremos pronto.</span>
+            <div className="mb-6 rounded-xl bg-emerald-50 border border-emerald-200 px-4 py-3 flex items-start space-x-3">
+              <div className="mt-0.5">
+                <Check className="h-5 w-5 text-emerald-500" />
+              </div>
+              <div className="text-sm">
+                <p className="font-semibold text-emerald-800">Mensaje enviado correctamente</p>
+                <p className="text-emerald-700">
+                  Gracias por contactarnos. Te responderemos lo antes posible a través del email facilitado.
+                </p>
+              </div>
             </div>
           )}
 
           {submitStatus === 'error' && (
-            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center space-x-2 text-red-800 animate-fade-in">
-              <AlertCircle className="h-5 w-5" />
-              <span>Error al enviar el mensaje. Por favor, inténtalo de nuevo.</span>
+            <div className="mb-6 rounded-xl bg-red-50 border border-red-200 px-4 py-3 flex items-start space-x-3">
+              <div className="mt-0.5">
+                <AlertCircle className="h-5 w-5 text-red-500" />
+              </div>
+              <div className="text-sm">
+                <p className="font-semibold text-red-800">Ha ocurrido un error</p>
+                <p className="text-red-700">
+                  No hemos podido enviar tu mensaje. Por favor, inténtalo de nuevo o contacta directamente por email o teléfono.
+                </p>
+              </div>
             </div>
           )}
 
@@ -163,10 +254,11 @@ export function ContactForm() {
                   required
                   value={formData.nombre}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
+                  className="w-full px-3 py-2 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
                   placeholder="Tu nombre"
                 />
               </div>
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-card-foreground mb-2">
                   Email *
@@ -178,8 +270,8 @@ export function ContactForm() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
-                  placeholder="tu@email.com"
+                  className="w-full px-3 py-2 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
+                  placeholder="tucorreo@ejemplo.com"
                 />
               </div>
             </div>
@@ -194,7 +286,7 @@ export function ContactForm() {
                 name="telefono"
                 value={formData.telefono}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
+                className="w-full px-3 py-2 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
                 placeholder="+34 XXX XXX XXX"
               />
             </div>
@@ -202,7 +294,7 @@ export function ContactForm() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="fechaEntrada" className="block text-sm font-medium text-card-foreground mb-2">
-                  Fecha de Entrada
+                  Fecha de entrada
                 </label>
                 <input
                   type="date"
@@ -210,12 +302,13 @@ export function ContactForm() {
                   name="fechaEntrada"
                   value={formData.fechaEntrada}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
+                  className="w-full px-3 py-2 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
                 />
               </div>
+
               <div>
                 <label htmlFor="fechaSalida" className="block text-sm font-medium text-card-foreground mb-2">
-                  Fecha de Salida
+                  Fecha de salida
                 </label>
                 <input
                   type="date"
@@ -223,23 +316,23 @@ export function ContactForm() {
                   name="fechaSalida"
                   value={formData.fechaSalida}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
+                  className="w-full px-3 py-2 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
                 />
               </div>
             </div>
 
             <div>
               <label htmlFor="huespedes" className="block text-sm font-medium text-card-foreground mb-2">
-                Número de Huéspedes
+                Número de huéspedes
               </label>
               <select
                 id="huespedes"
                 name="huespedes"
                 value={formData.huespedes}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
+                className="w-full px-3 py-2 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
               >
-                <option value="">Selecciona...</option>
+                <option value="">Selecciona una opción</option>
                 <option value="1">1 persona</option>
                 <option value="2">2 personas</option>
                 <option value="3">3 personas</option>
@@ -262,75 +355,61 @@ export function ContactForm() {
               <textarea
                 id="mensaje"
                 name="mensaje"
-                rows={4}
                 value={formData.mensaje}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground resize-none"
-                placeholder="Cuéntanos sobre tus necesidades, preguntas especiales, o cualquier información adicional..."
+                rows={4}
+                className="w-full px-3 py-2 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground resize-none"
+                placeholder="Cuéntanos un poco más sobre tu viaje, horario de llegada aproximado, etc."
               />
             </div>
 
-            {/* Checkbox de Política de Privacidad */}
-            <div className="p-4 bg-muted/30 rounded-lg border border-border">
+            <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <input
+                  id="privacy"
                   type="checkbox"
-                  id="privacyPolicy"
                   checked={privacyAccepted}
                   onChange={(e) => setPrivacyAccepted(e.target.checked)}
-                  className="mt-1 h-4 w-4 rounded border-input text-primary focus:ring-2 focus:ring-primary"
-                  required
+                  className="mt-1 h-4 w-4 rounded border-input text-primary focus:ring-primary"
                 />
-                <label htmlFor="privacyPolicy" className="text-sm text-card-foreground">
-                  He leído y acepto el{" "}
-                  <Link 
-                    href="/legal/aviso-legal" 
-                    className="text-primary hover:underline font-medium"
-                    target="_blank"
-                  >
-                    Aviso legal
-                  </Link>
-                  {" "}y la{" "}
-                  <Link 
-                    href="/legal/privacidad" 
-                    className="text-primary hover:underline font-medium"
-                    target="_blank"
-                  >
-                    Política de privacidad
+                <label htmlFor="privacy" className="text-sm text-muted-foreground">
+                  He leído y acepto la{" "}
+                  <Link href="/legal/privacidad" className="text-primary hover:underline">
+                    Política de Privacidad
                   </Link>
                   .
                 </label>
               </div>
-            </div>
 
-            <div className="space-y-4">
-              <button
-                type="submit"
-                disabled={isSubmitting || !privacyAccepted}
-                className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="animate-spin h-5 w-5 border-2 border-current border-t-transparent rounded-full" />
-                    <span>Enviando...</span>
-                  </>
-                ) : (
-                  <>
-                    <Send className="h-5 w-5" />
-                    <span>Enviar Mensaje</span>
-                  </>
-                )}
-              </button>
+              <div className="flex flex-col md:flex-row gap-3">
+                <button
+                  type="submit"
+                  disabled={isSubmitting || !privacyAccepted}
+                  className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin h-5 w-5 border-2 border-current border-t-transparent rounded-full" />
+                      <span>Enviando...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="h-5 w-5" />
+                      <span>Enviar Mensaje</span>
+                    </>
+                  )}
+                </button>
 
-              <a
-                href={generateWhatsAppUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
-              >
-                <MessageSquare className="h-5 w-5" />
-                <span>Enviar por WhatsApp</span>
-              </a>
+                <a
+                  href={generateWhatsAppUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-green-600 text-white px-6 py-3 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-center space-x-2"
+                >
+                  <MessageSquare className="h-5 w-5" />
+                  <span>Enviar por WhatsApp</span>
+                </a>
+              </div>
             </div>
           </form>
         </div>
